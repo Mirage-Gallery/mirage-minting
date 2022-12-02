@@ -6,7 +6,7 @@ const AbstractArtchitecture = () => {
 
     let overallID = 11
   
-    const testMinterAddress = "0xE0216403881A742B5b253EbF55f6c5930E8728aa"
+    const minterAddress = "0xE0216403881A742B5b253EbF55f6c5930E8728aa"
   
     const [walletAddress, setWallet] = useState("")
     const [status, setStatus] = useState("")
@@ -58,7 +58,7 @@ const AbstractArtchitecture = () => {
         numToMint = 1
       }
       const minterABI = require('../minter-abi.json')
-      const { status } = await publicMint(testMinterAddress, minterABI, overallID, numToMint)
+      const { status } = await publicMint(minterAddress, minterABI, overallID, numToMint)
       setStatus(status)
     }
   
@@ -69,7 +69,7 @@ const AbstractArtchitecture = () => {
         numToMint = 1
       }
       const minterABI = require('../minter-abi.json')
-      const { status } = await earlyMint(testMinterAddress, minterABI, overallID, membershipID, numToMint)
+      const { status } = await earlyMint(minterAddress, minterABI, overallID, membershipID, numToMint)
       setStatus(status)
     }
   
