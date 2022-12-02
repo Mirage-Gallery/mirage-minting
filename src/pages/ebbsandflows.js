@@ -105,7 +105,6 @@ const EbbsandFlows = () => {
         )}
       </button>
       <br></br>
-          <h6 id = "subheader"></h6>
           <button id = "reload" onClick={showRemaining} class = 'btn walletButton'>Refresh</button><br></br><br></br><br></br>
           <input id='membership' type='text' placeholder='Membership ID (0-50)' style={{width: '175px'}}/> &nbsp;&nbsp;&nbsp;
           <input id='quantityEarly' type='text' placeholder='Quantity (1-3)' style={{width: '125px'}}/>&nbsp;&nbsp;&nbsp;

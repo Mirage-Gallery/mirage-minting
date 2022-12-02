@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { connectWallet, getCurrentWalletConnected, publicMint, earlyMint, getTokenInfo } from "../utils/interact.js";
 
 const Reinventions = () => {
-  
+
   let overallID = 12
 
   const minterAddress = "0xE0216403881A742B5b253EbF55f6c5930E8728aa"
@@ -105,7 +105,6 @@ const Reinventions = () => {
         )}
       </button>
       <br></br>
-          <h6 id = "subheader"></h6>
           <button id = "reload" onClick={showRemaining} class = 'btn walletButton'>Refresh</button><br></br><br></br><br></br>
           <input id='membership' type='text' placeholder='Membership ID (0-50)' style={{width: '175px'}}/> &nbsp;&nbsp;&nbsp;
           <input id='quantityEarly' type='text' placeholder='Quantity (1-3)' style={{width: '125px'}}/>&nbsp;&nbsp;&nbsp;
