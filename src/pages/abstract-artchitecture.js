@@ -54,7 +54,7 @@ const AbstractArtchitecture = () => {
 
   const onPublicMintPressed = async () => {
     let numToMint = document.getElementById('quantityPublic').value
-    if (numToMint == '') {
+    if (numToMint === '') {
       numToMint = 1
     }
     const minterABI = require('../minter-abi.json')
@@ -105,13 +105,13 @@ const AbstractArtchitecture = () => {
         )}
       </button>
       <br></br>
-          <button id = "reload" onClick={showRemaining} class = 'btn walletButton'>Refresh</button><br></br><br></br><br></br>
+          <button id = "reload" onClick={showRemaining} className = 'btn walletButton'>Refresh</button><br></br><br></br><br></br>
           <input id='membership' type='text' placeholder='Membership ID (0-50)' style={{width: '175px'}}/> &nbsp;&nbsp;&nbsp;
           <input id='quantityEarly' type='text' placeholder='Quantity (1-3)' style={{width: '125px'}}/>&nbsp;&nbsp;&nbsp;
-          <button id = "mintEarly" onClick={onEarlyMintPressed} class = 'btn walletButton'>Mint Presale</button> <h id = "remainingPre"></h><br></br><br></br><br></br>
+          <button id = "mintEarly" onClick={onEarlyMintPressed} className = 'btn walletButton'>Mint Presale</button><br></br><br></br><br></br>
           <br></br>
           <input id='quantityPublic' type='text' placeholder='Quantity (1-10)' style={{width: '125px'}}/>&nbsp;&nbsp;&nbsp;
-          <button id = "mintPublic" onClick={onPublicMintPressed} class = 'btn walletButton'>Mint Public Sale</button><br></br><h id = "remainingPub"></h>
+          <button id = "mintPublic" onClick={onPublicMintPressed} className = 'btn walletButton'>Mint Public Sale</button><br></br>
       <p id="remaining">
         {remaining}
       </p>
