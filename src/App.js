@@ -6,16 +6,19 @@ import AbstractArtchitecture from './pages/abstract-artchitecture';
 import Reinventions from './pages/reinventions';
 import EbbsandFlows from './pages/ebbsandflows';
 import CuratedMinting from './pages/curated-minting';
+import SentientClaim from './pages/sentient-claim';
+
 
 function App() {
   return (
   <Router>
 	<Routes>
-		<Route exact path='/' exact element={<Home />} />
+		<Route exact path='/' element={<Home />} />
 		<Route path='/abstract-artchitecture' element={<AbstractArtchitecture/>} />
     	<Route path='/reinventions' element={<Reinventions/>} />
     	<Route path='/ebbs-and-flows' element={<EbbsandFlows/>} />
 		<Route path='/curated-minting' element={<CuratedMinting/>} />
+		<Route path='/sentient-claim' element={<SentientClaim/>} />
 	</Routes>
 	</Router>
   );
