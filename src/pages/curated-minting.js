@@ -12,7 +12,7 @@ const CuratedMinting = () => {
     });
   }
   let overallID
-  const minterAddress = "0xE0216403881A742B5b253EbF55f6c5930E8728aa"
+  const minterAddress = "0xE4C2BF5E734A23e426022bb0b785804C87684A3d"
 
   const [walletAddress, setWallet] = useState("")
   const [status, setStatus] = useState("")
