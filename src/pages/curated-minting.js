@@ -128,7 +128,6 @@ const CuratedMinting = () => {
       </button>
       <br></br>
           <button id = "reload" onClick={showRemaining} class = 'btn walletButton'>Refresh</button><br></br><br></br><br></br>
-
           <select name="project" id="project">
             <option value="0">Select Artist</option>
             <option value="1">Somnai (Otherwhere)</option>
