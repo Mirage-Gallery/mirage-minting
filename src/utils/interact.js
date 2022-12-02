@@ -19,6 +19,9 @@ export const publicMint = async(minterContract, minterABI, projectID, numToMint)
     let projTokenInfo = await getTokenInfo(projectID)
     let priceInWei = (projTokenInfo[1] * numToMint)
     window.contract = new web3.eth.Contract(minterABI, minterContract)
+    if (projTokenInfo[8]) {
+      return { status: "😥 Not in public phase. Use presale minting option instead!" }
+    }
     if (numToMint > 10) {
         return { status: "😥 Can't mint more than 10 at a time!" }
     } else {
@@ -52,6 +55,9 @@ export const earlyMint = async(minterContract, minterABI, projectID, membershipI
     let projTokenInfo = await getTokenInfo(projectID)
     let priceInWei = (projTokenInfo[1] * numToMint)
     window.contract = new web3.eth.Contract(minterABI, minterContract)
+    if (!projTokenInfo[8]) {
+      return { status: "😥 Not in presale phase. Use public minting option instead!" }
+    }
     if (membershipID > 50 || membershipID == '') {
         return { status: "😥 Enter a valid membership ID (0-50)" }
     }
