@@ -100,6 +100,12 @@ const SentientClaim = () => {
           <span>Connect Wallet</span>
         )}
       </button><br></br><br></br><br></br><br></br>
+      <br></br><input id='membershipCheck' type='text' placeholder='Membership ID (0-49)' style={{width: '175px'}}/>&nbsp;&nbsp;&nbsp;
+          <button id = "check" onClick={onCheckPressed} className = 'btn walletButton'>Check</button><br></br>
+      <p id="status2">
+        {status2}
+      </p>
+      <p id="list"></p><br></br><br></br><br></br><br></br>
           <select name="project" id="project">
             <option value="0">Select Project</option>
             <option value="1">SOMNAI (Otherwhere)</option>
@@ -126,12 +132,7 @@ const SentientClaim = () => {
           </p>
           <br></br>
           <br></br>
-          <input id='membershipCheck' type='text' placeholder='Membership ID (0-49)' style={{width: '175px'}}/>&nbsp;&nbsp;&nbsp;
-          <button id = "check" onClick={onCheckPressed} className = 'btn walletButton'>Check</button><br></br>
-      <p id="status2">
-        {status2}
-      </p>
-      <p id="list"></p>
+          
       
     </div>
   );
