@@ -7,6 +7,7 @@ import Reinventions from './pages/reinventions';
 import EbbsandFlows from './pages/ebbsandflows';
 import CuratedMinting from './pages/curated-minting';
 import SentientClaim from './pages/sentient-claim';
+import SyntheticHorizons from './pages/synthetic-horizons';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     	<Route path='/ebbs-and-flows' element={<EbbsandFlows/>} />
 		<Route path='/curated-minting' element={<CuratedMinting/>} />
 		<Route path='/sentient-claim' element={<SentientClaim/>} />
+		<Route path='/synthetic-horizons' element={<SyntheticHorizons/>} />
 	</Routes>
 	</Router>
   );
