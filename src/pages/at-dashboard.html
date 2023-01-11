@@ -1,0 +1,395 @@
+<style>
+	.entry-header {display: none;}
+	.entry-content {margin: 0 !important;}
+	.um {margin: 3em auto 0 !important; max-width: 930px !important; padding: 3em 30px; background: #fff; border-radius: 10px; display: none;}
+	.user-section .inner-container {display: flex; min-height: 695px;}
+
+	.user-section .tabcontent {width: 80%; background: #fff; margin: 0; padding: 2em; border-top-right-radius: 10px; border-bottom-right-radius: 10px;}
+
+	.user-section .content.active {display: block;}
+	.user-section .btn.connect-wallet {display: none; border-radius: 10px; background: #000; color: #fff; font-family: Avenir; padding: 10px;}
+	.user-section .tokens-info .address {font-size: 15px !important; margin-top: 1em;}
+	.user-section .token-slider {display: flex; overflow: scroll;}
+	.user-section .token-inner-container {margin-top: 1em; display: flex; flex-direction: column;}
+	.user-section .token-item {max-width: 380px !important; margin-right: 30px;}
+	.user-section .token-item .title {margin: 0 !important; line-height: 1.5; min-height: 60px; font-weight: 500; font-size: 18px;}
+	.user-section .token-item .subtitle {margin: .5em 0 0 !important; line-height: 1.5; min-height: 60px; font-size: 16px;}
+	.user-section .token-item .more-info, .user-section .token-item .sell, .user-section .token-item .transfer, .user-section .token-item .download {display: block; margin: .2em auto; width: 100%; background: #000; font-size: 13px; font-weight: 400; text-transform: uppercase;}
+	.user-section .token-item .more-info {border: 1px solid #000; background: #fff; color: #000;}
+	.user-section .token-item a, .user-section .token-item .download {display: block; background-color: #fff; color: #000; border: 1px solid #000; width: 100%; font-family: Helvetica; font-weight: 600; margin-top: 0.2em; text-align: center; padding: 8px; font-size: 17px; border-radius: 5px; text-transform: none; padding: 12px;}
+	.user-section img {max-width: 175px !important; max-height: 175px !important; margin-bottom: .8em;}
+	.tingle-modal-box {width: 50%;}
+	.tingle-modal-box__content {color: #000; font-size: 16px;}
+	.tingle-modal-box__content .entry {display: flex; justify-content: space-between;}
+	.tingle-modal {background: rgba(0,0,0,.2);}
+	.tingle-modal:before {backdrop-filter: none !important;}
+	.transfer-modal .wrapper {display: flex; flex-direction: column;}
+	.transfer-modal label {font-weight: 500; margin-bottom: 1em;}
+	.download-modal h3 {margin-bottom: 1em;}
+	.tingle-modal-box__footer {display: flex; justify-content: flex-end; padding: 0.8rem 2rem;}
+	.tingle-modal-box__footer .tingle-btn {padding: .8rem 1.2em; font-size: 15px;}
+	.loader {display: none;}
+	.loader, .loader:before, .loader:after {border-radius: 50%;}
+	.loader {color: #1e2025; font-size: 11px; text-indent: -99999em; margin: 55px auto; position: relative; width: 10em; height: 10em; box-shadow: inset 0 0 0 1em; -webkit-transform: translateZ(0); -ms-transform: translateZ(0); transform: translateZ(0);}
+	.loader:before, .loader:after {position: absolute; content: '';}
+	.loader:before {width: 5.2em; height: 10.2em; background: #fff; border-radius: 10.2em 0 0 10.2em; top: -0.1em; left: -0.1em; -webkit-transform-origin: 5.1em 5.1em; transform-origin: 5.1em 5.1em; -webkit-animation: load2 2s infinite ease 1.5s; animation: load2 2s infinite ease 1.5s;}
+	.loader:after {width: 5.2em; height: 10.2em; background: #fff; border-radius: 0 10.2em 10.2em 0; top: -0.1em; left: 4.9em; -webkit-transform-origin: 0.1em 5.1em; transform-origin: 0.1em 5.1em; -webkit-animation: load2 2s infinite ease; animation: load2 2s infinite ease;}
+	@-webkit-keyframes load2 {
+	  0% {-webkit-transform: rotate(0deg); transform: rotate(0deg);}
+	  100% {-webkit-transform: rotate(360deg); transform: rotate(360deg);}
+	}
+	@keyframes load2 {
+	  0% {-webkit-transform: rotate(0deg); transform: rotate(0deg);}
+	  100% {-webkit-transform: rotate(360deg); transform: rotate(360deg);}
+	}
+
+	@media all and (max-width: 900px) {
+		.user-section .tabs {display: none;}
+		.user-section .tabcontent {width: 100%; border-top-left-radius: 10px; border-bottom-left-radius: 10px; max-width: none;}
+		.user-section .token-slider {flex-direction: column;}
+		.user-section .token-item {margin: 0 auto; margin-bottom: 2em;}
+		.user-section .token-item img {max-width: 100% !important; max-height: 100% !important; margin: 0; margin-bottom: 0.5em;}
+		.user-section .token-item .title {min-height: 0;}
+		.user-section .token-inner-container {margin-top: 3em;}
+	}
+
+</style>
+<section class="user-section" data-aos="fade-in">
+	<div class="inner-container">
+		<div class="tabs">
+			<div class="user-image">
+			</div>
+			<div class="user-name">
+			</div>
+			<button class="tablink tablink1">My Artworks</button>
+		</div>
+		<div class="tabcontent">
+			<div class="content content1 active">
+				<div class="loader"></div>
+				<button class="btn connect-wallet">Connect Wallet</button>
+				<div class="tokens-info">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+	jQuery(document).ready(function() {
+		var isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+
+	    if (isMobile) {
+	        jQuery('.tabcontent .content').html('This page is only available for desktop users because of Metamask').attr('style', '    font-weight: 500;');
+	    }
+
+		var mirageAddress = '0x63400da86a6b42dac41075667cF871a5Ef93802F';
+		var mirageABI = [{"inputs":[{"internalType":"string","name":"name","type":"string"},{"internalType":"string","name":"symbol","type":"string"},{"internalType":"string","name":"baseURI","type":"string"},{"internalType":"uint256","name":"batch_amount","type":"uint256"},{"internalType":"uint256","name":"royalty_amount","type":"uint256"},{"internalType":"address","name":"creator","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"approved","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"operator","type":"address"},{"indexed":false,"internalType":"bool","name":"approved","type":"bool"}],"name":"ApprovalForAll","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"creator","type":"address"},{"indexed":true,"internalType":"address","name":"buyer","type":"address"},{"indexed":true,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"RecievedRoyalties","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"creator","type":"address"},{"indexed":true,"internalType":"uint256","name":"price","type":"uint256"},{"indexed":true,"internalType":"uint256","name":"amount_made","type":"uint256"}],"name":"SeriesMade","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"buyer","type":"address"},{"indexed":true,"internalType":"uint256","name":"token_id","type":"uint256"},{"indexed":true,"internalType":"uint256","name":"price","type":"uint256"}],"name":"SeriesPurchased","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":true,"internalType":"uint256","name":"fee","type":"uint256"}],"name":"TransferFee","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":true,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"TransferPayment","type":"event"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"BalancesMap","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"MAX_MINT","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"MintableAddress","outputs":[{"internalType":"address payable","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"PreMintData","outputs":[{"internalType":"uint256","name":"amount_of_tokens_left","type":"uint256"},{"internalType":"uint256","name":"price","type":"uint256"},{"internalType":"address payable","name":"creator","type":"address"},{"internalType":"string","name":"url","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"PrintSeries","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"_batchMintOwnersMap","outputs":[{"internalType":"uint256","name":"start","type":"uint256"},{"internalType":"uint256","name":"end","type":"uint256"},{"internalType":"address","name":"owner","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"_exists","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"_totalBatches","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"_totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"approve","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"baseURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"count","type":"uint256"}],"name":"batchMint","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_amount","type":"uint256"},{"internalType":"uint256","name":"_price","type":"uint256"},{"internalType":"string","name":"_url","type":"string"}],"name":"createPrintSeries","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"getApproved","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"hasRoyalties","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"pure","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"operator","type":"address"}],"name":"isApprovedForAll","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"}],"name":"mint","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_seriesID","type":"uint256"},{"internalType":"address","name":"_to","type":"address"}],"name":"mintSeries","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"string","name":"url","type":"string"}],"name":"mintWithURI","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"ownerOf","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_creator","type":"address"},{"internalType":"address","name":"_buyer","type":"address"},{"internalType":"uint256","name":"_amount","type":"uint256"}],"name":"royaltiesRecieved","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"royaltyAmount","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"royaltyInfo","outputs":[{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"bytes","name":"_data","type":"bytes"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"operator","type":"address"},{"internalType":"bool","name":"approved","type":"bool"}],"name":"setApprovalForAll","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"exchange","type":"address"},{"internalType":"bool","name":"approved","type":"bool"}],"name":"setApprovalForExchange","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes4","name":"interfaceId","type":"bytes4"}],"name":"supportsInterface","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"index","type":"uint256"}],"name":"tokenByIndex","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"uint256","name":"index","type":"uint256"}],"name":"tokenOfOwnerByIndex","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"uint256","name":"index","type":"uint256"}],"name":"tokenOwners","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"tokenURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSeries","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"transferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"}];
+
+		var mirageAddress2 = '0x3Cf6e4ff99D616d44Be53E90F74eAE5D150Cb726';
+		var mirageABI2 = [{"inputs":[{"internalType":"string","name":"name","type":"string"},{"internalType":"string","name":"symbol","type":"string"},{"internalType":"string","name":"baseURI","type":"string"},{"internalType":"uint256","name":"batch_amount","type":"uint256"},{"internalType":"uint256","name":"royalty_amount","type":"uint256"},{"internalType":"address","name":"creator","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"approved","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"operator","type":"address"},{"indexed":false,"internalType":"bool","name":"approved","type":"bool"}],"name":"ApprovalForAll","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"creator","type":"address"},{"indexed":true,"internalType":"address","name":"buyer","type":"address"},{"indexed":true,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"RecievedRoyalties","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"creator","type":"address"},{"indexed":true,"internalType":"uint256","name":"price","type":"uint256"},{"indexed":true,"internalType":"uint256","name":"amount_made","type":"uint256"}],"name":"SeriesMade","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"buyer","type":"address"},{"indexed":true,"internalType":"uint256","name":"token_id","type":"uint256"},{"indexed":true,"internalType":"uint256","name":"price","type":"uint256"}],"name":"SeriesPurchased","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":true,"internalType":"uint256","name":"fee","type":"uint256"}],"name":"TransferFee","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":true,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"TransferPayment","type":"event"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"BalancesMap","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"MAX_MINT","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"MintableAddress","outputs":[{"internalType":"address payable","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"PreMintData","outputs":[{"internalType":"uint256","name":"amount_of_tokens_left","type":"uint256"},{"internalType":"uint256","name":"price","type":"uint256"},{"internalType":"address payable","name":"creator","type":"address"},{"internalType":"string","name":"url","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"PrintSeries","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"_batchMintOwnersMap","outputs":[{"internalType":"uint256","name":"start","type":"uint256"},{"internalType":"uint256","name":"end","type":"uint256"},{"internalType":"address","name":"owner","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"_exists","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"_totalBatches","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"_totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"approve","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"baseURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"count","type":"uint256"}],"name":"batchMint","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_amount","type":"uint256"},{"internalType":"uint256","name":"_price","type":"uint256"},{"internalType":"string","name":"_url","type":"string"}],"name":"createPrintSeries","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"getApproved","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"hasRoyalties","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"pure","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"operator","type":"address"}],"name":"isApprovedForAll","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"}],"name":"mint","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_seriesID","type":"uint256"},{"internalType":"address","name":"_to","type":"address"}],"name":"mintSeries","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"string","name":"url","type":"string"}],"name":"mintWithURI","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"ownerOf","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_creator","type":"address"},{"internalType":"address","name":"_buyer","type":"address"},{"internalType":"uint256","name":"_amount","type":"uint256"}],"name":"royaltiesRecieved","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"royaltyAmount","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"royaltyInfo","outputs":[{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"bytes","name":"_data","type":"bytes"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"operator","type":"address"},{"internalType":"bool","name":"approved","type":"bool"}],"name":"setApprovalForAll","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"exchange","type":"address"},{"internalType":"bool","name":"approved","type":"bool"}],"name":"setApprovalForExchange","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes4","name":"interfaceId","type":"bytes4"}],"name":"supportsInterface","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"index","type":"uint256"}],"name":"tokenByIndex","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"uint256","name":"index","type":"uint256"}],"name":"tokenOfOwnerByIndex","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"uint256","name":"index","type":"uint256"}],"name":"tokenOwners","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"tokenURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSeries","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"transferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"}];
+
+		// Tabs functionality
+		jQuery('.tabs .tablink').click(function() {
+			if (jQuery(this).index() == 0) {
+				jQuery('.tabcontent .content').removeClass('active');
+				jQuery('.tabcontent .content:nth-child(' + (jQuery(this).index() + 1) + ')').addClass('active');
+			} else if (jQuery(this).hasClass('account-link')) {
+				window.location.href = '/account';
+			}
+		})
+
+		if (window.ethereum) {
+		    window.web3 = new Web3(window.ethereum);
+		    var contract = new web3.eth.Contract(mirageABI, mirageAddress);
+		    var contract2 = new web3.eth.Contract(mirageABI2, mirageAddress2);
+		    
+		    web3.eth.getAccounts()
+		    	.then(data => {
+		    		if (!data.length) {
+		    			jQuery('.connect-wallet').show();
+		    		} else {
+		    			getTokens(contract, true)
+		    				.then((data) => {
+		    					getTokens(contract2, true)
+		    						.then((data2) => {
+		    							jQuery('.loader').hide();
+					    				initiateSlider([...data.tokenData, ...data2.tokenData], data.account, [...data.tokenIds, ...data2.tokenIds]);
+		    						})
+					    	})
+					    	.catch(e => {
+					    		jQuery('.loader').hide();
+					    		console.log(e)
+					    	})
+		    		}
+		    	})
+
+		} else {
+			var metamaskLink = 'https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en';
+			jQuery('.tabcontent .content').html(`
+				Please install an Ethereum-compatible browser or extension like <a target="_blank" href="${metamaskLink}" style="color: #03a5fc">MetaMask</a> to view your artworks.
+				`);
+		}
+
+		// Metamask integration
+		jQuery('.connect-wallet').click(function() {
+			if (window.ethereum) {
+			    window.web3 = new Web3(window.ethereum);
+			    jQuery(this).hide();
+			    jQuery('.loader').show();
+			    getTokens(contract, true)
+    				.then((data) => {
+    					getTokens(contract2, true)
+    						.then((data2) => {
+    							jQuery('.loader').hide();
+			    				initiateSlider([...data.tokenData, ...data2.tokenData], data.account, [...data.tokenIds, ...data2.tokenIds]);
+    						})
+			    	})
+			    	.catch(e => {
+			    		jQuery('.loader').hide();
+			    		console.log(e)
+			    	})
+
+			} else {
+			  	alert("Please install an Ethereum-compatible browser or extension like MetaMask to use this dApp!");
+			}
+		})
+
+		function getTokens(contract, loader = false) {
+			return new Promise((resolve, reject) => {
+				ethereum.request({ method: 'eth_requestAccounts' })
+			    	.then(function(res) {
+			    		jQuery('.loader').show();
+			    		var account = res[0];
+
+			    		var tokenData = [];
+
+			    		contract.methods.totalSupply().call({from: account})
+			    			.then(totalSupply => {
+			    				if (!totalSupply) {
+			    					jQuery('.tokens-info').html('You don\'t have any NFTs. Go and <a href="https://opensea.io/collection/mirage-gallery">get some</a>!');
+			    				} else {
+			    					var promises = [];
+			    					var tokenIds = [];
+			    					for (var i = 0; i < totalSupply; i++) {
+			    						var URIPromise = contract.methods.tokenByIndex(i + 1).call({from: account})
+			    							.then(tokenId => {
+			    								return contract.methods.ownerOf(tokenId).call({from: account})
+			    								    .then(owner => {
+				    								  	if (owner.toLowerCase() == account.toLowerCase()) {
+				    								  		tokenIds.push(tokenId);
+				    								  		return contract.methods.tokenURI(tokenId).call({from: account})
+				    								  			.then(uri => {
+				    								  				return new Promise((resolve, reject) => {
+				    								  					fetch(uri)
+				    								  						.then(r => r.json())
+				    								  						.then(data => resolve(data))
+				    								  						.catch(e => reject(e));
+				    								  					});
+				    								  			});
+				    								  	} else {
+				    								  		return false;
+				    								  	}
+			    								    })
+			    							})
+
+			    						promises.push(URIPromise);
+			    					}
+
+			    					Promise.all(promises)
+			    						.then(tokenData => {
+			    							resolve({tokenData: tokenData.filter(t => t), account: account, tokenIds: tokenIds});
+			    						});
+			    				}
+			    			})
+			    	})
+			    	.catch(function(e) {
+			    		reject(e);
+			    	})
+			})
+		}
+
+		function initiateSlider(tokens, address, tokenIds) {
+			jQuery('.tokens-info').append(`
+				<h2>
+					Your Alejandro & Taylor artworks
+				</h2>
+				<div class="address">
+					(Crypto-Native support not yet enabled. Displaying tokens in address: <strong>${address}</strong>
+				</div>
+				<div class="token-slider"${ !tokens.length ? ' style="margin-top: 2em;"' : '' }>${ !tokens.length ? 'There aren\'t any Mirage Gallery tokens in your wallet.' : '' }
+				</div>`);
+
+			for (var i = 0; i < tokens.length; i++) {
+				var index = i;
+				var tokenItem = `
+				<div class="token-item token-item-${i + 1}">
+					<div class="token-inner-container">
+						<img src="${tokens[i].image}">
+						<div class="title">${tokens[i].title}</div>
+						<div class="subtitle">${tokens[i].subtitle}</div>
+						<button class="more-info">More information</button>
+						<button class="transfer">Transfer</button>
+						<button class="download">Download</button>
+					</div>
+				</div>
+				`;
+
+				jQuery('.token-slider').append(tokenItem);
+
+				jQuery(`.token-item-${i + 1} .more-info`).click(function() {
+					var index = jQuery(this).parent().parent().index();
+					var modal = createModal('more-info-modal');
+					modal.setContent(`
+						<div class="entry">
+							<div class="key">
+								<strong>Title: </strong>
+							</div>
+							<div class="property">
+								${tokens[index].title}
+							</div>
+						</div>
+						<div class="entry">
+							<div class="key">
+								<strong>Artist: </strong>
+							</div>
+							<div class="property">
+								${tokens[index].Artist}
+							</div>
+						</div>
+						<div class="entry">
+							<div class="key">
+								<strong>Contract address: </strong>
+							</div>
+							<div class="property">
+								${tokens[index].address}
+							</div>
+						</div>
+						<div class="entry">
+							<div class="key">
+								<strong>Token ID: </strong>
+							</div>
+							<div class="property">
+								${tokens[index].tokenId}
+							</div>
+						</div>
+						`);
+					modal.open();
+				});
+
+				jQuery(`.token-item-${i + 1} .transfer`).click(function() {
+					var index = jQuery(this).parent().parent().index();
+					var modal = createModal('transfer-modal', true);
+					modal.setContent(`
+						<div class="wrapper">
+							<label>Address of the receiver</label>
+							<input type="text" id="receiverAddress" placeholder="Enter address">
+						</div>
+						`);
+					modal.addFooterBtn('Confirm transfer', 'tingle-btn tingle-btn--primary', function() {
+						var abi;
+						var tokenId;
+						if (tokens[index].address == mirageAddress) {
+							abi = mirageABI;
+							tokenId = tokens[index].tokenId;
+						} else if (tokens[index].address == mirageAddress2) {
+							abi = mirageABI2;
+							tokenId = tokenIds[index];
+						}
+						var contract = new web3.eth.Contract(abi, tokens[index].address);
+						ethereum.request({ method: 'eth_requestAccounts' })
+							.then(accounts => {
+								var account = accounts[0];
+								console.log(`${account}, ${jQuery('#receiverAddress').val()}, ${tokenId}`);
+								contract.methods.safeTransferFrom(account, jQuery('#receiverAddress').val(), tokenId).send({from: account});
+								modal.close();
+							})
+							.catch(e => {
+								console.log(e);
+								modal.close();
+							})
+					});
+
+					modal.addFooterBtn('Cancel', 'tingle-btn tingle-btn--info', function() {
+					    modal.close();
+					});
+					modal.open();
+				});
+
+				jQuery(`.token-item-${i + 1} .download`).click(function() {
+					var index = jQuery(this).parent().parent().index();
+					var modal = createModal('download-modal', true);
+					modal.setContent(`
+						<div class="wrapper">
+							<h3>Verify that this is your NFT by signing a message with your wallet</h3>
+							<p>When you sign a message it verifies that you own the wallet it was signed from. Like when you sign a check, but on the blockchain.</p>
+							<p>Signing the message is completely free and you'll be able to download immediately after.</p>
+						</div>
+						`);
+
+					modal.addFooterBtn('Sign', 'tingle-btn tingle-btn--primary', function() {
+						ethereum.request({ method: 'eth_requestAccounts' })
+							.then(accounts => {
+								var account = accounts[0];
+
+								var message = 'I\'m verifing that I own this NFT';
+								web3.eth.personal.sign(message, account)
+									.then(signature => {
+										modal.close();
+
+										var item = {file_key: tokens[index].file_key }
+										var data = {
+										    signedData: 'I\'m verifing that I own this NFT',
+										    signature: signature,
+										    from: account,
+										    contract_address: tokens[index].address,
+										    token_id: tokens[index].printableSeries ? parseInt(tokenIds[index]) : tokens[index].tokenId,
+										    item: item
+									    };
+									    //console.log(data);
+									    //console.log(tokens[index]);
+
+									    var xhr = new XMLHttpRequest();
+										xhr.open("POST", 'https://g1s14sw900.execute-api.us-east-1.amazonaws.com/prod/sign-message');
+										xhr.setRequestHeader("Content-Type", "application/json");
+										xhr.onreadystatechange = function() {
+										    if (this.readyState === XMLHttpRequest.DONE) {
+										    	if (this.status === 200) {
+										    		var response = JSON.parse(xhr.responseText);
+										    		//console.log(response);
+										        	window.open(response.url);
+										    	} else {
+										    		alert('Invalid address, please check your information.')
+										    		modal.close();
+										    	}
+										    }
+										}
+										xhr.send(JSON.stringify(data));
+
+									})
+									.catch(e => { console.log(e); modal.close(); });
+							})
+							.catch(e => {
+								console.log(e);
+								modal.close();
+							})
+					});
+
+					modal.addFooterBtn('Cancel', 'tingle-btn tingle-btn--info', function() {
+					    modal.close();
+					});
+					modal.open();
+				});
+			}
+		}
+
+		function createModal(cssClass, hasFooter = false) {
+			return new tingle.modal({
+			    footer: hasFooter,
+			    closeMethods: ['overlay', 'button', 'escape'],
+			    closeLabel: "Close",
+			    cssClass: [cssClass]
+			});
+		}
+
+
+	});
+</script>
