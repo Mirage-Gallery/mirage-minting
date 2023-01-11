@@ -122,6 +122,7 @@ const SentientClaim = () => {
             <option value="12">KaptN (Noah's Ark)</option>
             <option value="13">Ren AI (Memory)</option>
             <option value="14">Thomas Intuitive Art (The World Outside)</option>
+            <option value="15">Maneki Neko (Oneiroscapes)</option>
             <option value="1000">Dreamers</option>
           </select><br></br>
           <br></br><br></br><br></br>

@@ -133,6 +133,7 @@ const CuratedMinting = () => {
             <option value="1">Somnai (Otherwhere)</option>
             <option value="11">MrHabMo (Esquisse)</option>
             <option value="12">KaptN (Noah's Ark)</option>
+            <option value="15">Maneki Neko (Oneiroscapes)</option>
           </select>
           <br></br><br></br><br></br>
           <input id='membership' type='text' placeholder='Membership ID (0-50)' style={{width: '175px'}}/> &nbsp;&nbsp;&nbsp;
