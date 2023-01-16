@@ -7,7 +7,6 @@ import Reinventions from './pages/reinventions';
 import EbbsandFlows from './pages/ebbsandflows';
 import CuratedMinting from './pages/curated-minting';
 import SentientClaim from './pages/sentient-claim';
-import Oneiroscapes from './pages/oneiroscapes';
 
 function App() {
   return (
