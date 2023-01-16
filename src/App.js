@@ -19,7 +19,6 @@ function App() {
     	<Route path='/ebbs-and-flows' element={<EbbsandFlows/>} />
 		<Route path='/curated-minting' element={<CuratedMinting/>} />
 		<Route path='/sentient-claim' element={<SentientClaim/>} />
-		<Route path='/oneiroscapes' element={<Oneiroscapes/>} />
 	</Routes>
 	</Router>
   );
