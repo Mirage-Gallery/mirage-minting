@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Navigate}
+import { BrowserRouter as Router, Routes, Route}
 	from 'react-router-dom';
 import Home from './pages';
 import AbstractArtchitecture from './pages/abstract-artchitecture';
@@ -18,7 +18,6 @@ function App() {
 	  <Route path='/ebbs-and-flows' element={<EbbsandFlows/>} />
 	  <Route path='/curated-minting' element={<CuratedMinting/>} />
 	  <Route path='/sentient-claim' element={<SentientClaim/>} />
-	  <Route path='/curated-details' element={<Navigate to="/curated-details.json" />} />
 	</Routes>
 	</Router>
 	);
