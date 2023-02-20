@@ -174,11 +174,9 @@ const CuratedDetails = () => {
             secondaryArtistAddress: ""
           }
         ]}
-  return (
-    <div>
-      <pre>{JSON.stringify(jsonData, null, 2)}</pre>
-    </div>
-  );
+    return (
+            <pre>{JSON.stringify(jsonData, null, 2)}</pre>
+        );
 };
 
 export default CuratedDetails;
