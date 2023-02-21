@@ -2,16 +2,10 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { connectWallet, getCurrentWalletConnected, publicMint, earlyMint, getTokenInfo } from "../utils/interact.js";
 
-const CuratedMinting = () => {
+const BeyondTheLens = () => {
 
-  let selection = document.querySelector('select');
-  if (selection) {
-    selection.addEventListener('change',() => {
-      showRemaining()
-      setStatus()
-    });
-  }
-  let overallID
+  let overallID = 17
+
   const minterAddress = "0xE4C2BF5E734A23e426022bb0b785804C87684A3d"
 
   const [walletAddress, setWallet] = useState("")
@@ -20,7 +14,6 @@ const CuratedMinting = () => {
 
   function addWalletListener() {
     if (window.ethereum) {
-      overallID = document.getElementById('project').value
       showRemaining(overallID)
       window.ethereum.on("accountsChanged", (accounts) => {
         if (accounts.length > 0) {
@@ -60,11 +53,6 @@ const CuratedMinting = () => {
   }
 
   const onPublicMintPressed = async () => {
-    overallID = document.getElementById('project').value
-    if (overallID == 0) {
-      setStatus("Select an artist from the dropdown menu above")
-      return
-    }
     let numToMint = document.getElementById('quantityPublic').value
     if (numToMint == '') {
       numToMint = 1
@@ -75,11 +63,6 @@ const CuratedMinting = () => {
   }
 
   const onEarlyMintPressed = async () => {
-    overallID = document.getElementById('project').value
-    if (overallID == 0) {
-      setStatus("Select an artist from the dropdown menu above")
-      return
-    }
     let numToMint = document.getElementById('quantityEarly').value
     let membershipID = document.getElementById('membership').value
     if (numToMint == '') {
@@ -91,11 +74,6 @@ const CuratedMinting = () => {
   }
 
   const showRemaining = async () => {
-    overallID = document.getElementById('project').value
-    if (overallID == 0) {
-      setRemaining('')
-      return
-    }
     const projTokenInfo = await getTokenInfo(overallID)
     let remaining = 'Minting is either closed, or has not opened yet!'
     if (projTokenInfo[8]) {
@@ -128,14 +106,6 @@ const CuratedMinting = () => {
       </button>
       <br></br>
           <button id = "reload" onClick={showRemaining} className = 'btn walletButton'>Refresh</button><br></br><br></br><br></br>
-          <select name="project" id="project">
-            <option value="0">Select Artist</option>
-            <option value="1">Somnai (Otherwhere)</option>
-            <option value="11">MrHabMo (Esquisse)</option>
-            <option value="12">KaptN (Noah's Ark)</option>
-            <option value="17">KOI (SINEMA)</option>
-          </select>
-          <br></br><br></br><br></br>
           <input id='membership' type='text' placeholder='Membership ID (0-50)' style={{width: '175px'}}/> &nbsp;&nbsp;&nbsp;
           <input id='quantityEarly' type='text' placeholder='Quantity (1-3)' style={{width: '125px'}}/>&nbsp;&nbsp;&nbsp;
           <button id = "mintEarly" onClick={onEarlyMintPressed} className = 'btn walletButton'>Mint Presale</button><br></br><br></br><br></br>
@@ -152,4 +122,4 @@ const CuratedMinting = () => {
   );
 };
 
-export default CuratedMinting;
+export default BeyondTheLens;
