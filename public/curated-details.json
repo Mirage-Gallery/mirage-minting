@@ -2,6 +2,7 @@
     "name": "Curated Details",
     "curatedPayoutAddress": "0x4a462cbf4902A8D26bF2c6931F12260d8fcEC69e",
     "curatedPayoutBPS": 250,
+    "artistPayoutBPS": 750,
     "data": [
       {
         "projectId": 1,
