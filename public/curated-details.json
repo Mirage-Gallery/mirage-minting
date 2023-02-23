@@ -12,7 +12,8 @@
         "website": "https://somnai.io",
         "license": "",
         "artistAddress": "0x0237765EB2C196BB1A8FCa4F0417A7c05a62682C",
-        "secondaryArtistAddress": ""
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://QmU7qkFDaPowZANAiAEUyueubMgJwHPPi4LYSak5NJ6JN3"
     },
       {
         "projectId": 2,
@@ -22,7 +23,8 @@
         "website": "https://linktr.ee/rainisto",
         "license": "",
         "artistAddress": "0x24C3833219AB8128644F37cbb51546cdfbCE6c02",
-        "secondaryArtistAddress": ""
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://QmPeauc7oDhp2VPyEqSdvkRu8kijEdW4ez8siTvViEMq6z"
     },
       {
         "projectId": 3,
@@ -32,7 +34,8 @@
         "website": "",
         "license": "CC0",
         "artistAddress": "0x0Fd5d61BFC11C48B0FEC6387f7745014Aeb7D3AE",
-        "secondaryArtistAddress": ""
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://bafybeifvqbotgrzrmj4kncqe4zvqxoouvkpnvx7c3siriq4venviup23cy"
     },
       {
         "projectId": 4,
@@ -42,7 +45,8 @@
         "website": "https://linktr.ee/revrart",
         "license": "",
         "artistAddress": "0xa21f3597B3A6C4E1fF6E0Fc3FAf3FAd0B0634100",
-        "secondaryArtistAddress": ""
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://bafybeidoge7dacand4mghzrch6pqji2ignjamhtgucuy4qapiprayh52x4"
     },
       {
         "projectId": 5,
@@ -52,7 +56,8 @@
         "website": "https://linktr.ee/saucebook",
         "license": "",
         "artistAddress": "0x2CE48F39C5440BF2216ecd04663C563caE49CcAc",
-        "secondaryArtistAddress": ""
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://bafybeiaz24sklxxuj3hpky62x6bnsid5tcuexfal2iuoufbr3iwzpemycq"
     },
       {
         "projectId": 6,
@@ -62,7 +67,8 @@
         "website": "https://twitter.com/socalpathy",
         "license": "",
         "artistAddress": "0x7e7475980e970090B9C228fE66d8635AFd0e5e74",
-        "secondaryArtistAddress": ""
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://bafybeidxzvmmmv5s6ucjowaaymtyysvar6e5cgp5hmhilttukndbj3uq2q"
     },
       {
         "projectId": 7,
@@ -72,7 +78,8 @@
         "website": "https://huemin-art.github.io/",
         "license": "",
         "artistAddress": "0x7c4A53E6e287A097B27f8aCA6786e556223c7b32",
-        "secondaryArtistAddress": ""
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://bafybeibnwrjieksfnlscw5nqivjt77fjjzbdttqzcszyajihtmksm2lt44"
     },
       {
         "projectId": 8,
@@ -82,7 +89,8 @@
         "website": "",
         "license": "CC0",
         "artistAddress": "0x4d9Fd61E5324862762E456990aF0316386f5EC1E",
-        "secondaryArtistAddress": "0x609521C742dB167329b09CE2025f095f106aaB4D"
+        "secondaryArtistAddress": "0x609521C742dB167329b09CE2025f095f106aaB4D",
+        "metadata": "ipfs://bafybeieq3wwkskhdxwgl54n27oj5ollby4e44hyexi75rby5go5wilsli4"
     },
       {
         "projectId": 9,
@@ -92,7 +100,8 @@
         "website": "",
         "license": "CC0",
         "artistAddress": "0x65A92e44d58Ed6e4049e157f1D99beE98bF595F7",
-        "secondaryArtistAddress": "0x5fC13C5A541041f8fa12fab492D064435eB8d2F5"
+        "secondaryArtistAddress": "0x5fC13C5A541041f8fa12fab492D064435eB8d2F5",
+        "metadata": "ipfs://bafybeig5bl2v4ikv4w7pu5n7w5zh7h7z53lze4ce3m2pf4ttikpmv7fury"
     },
       {
         "projectId": 10,
@@ -102,7 +111,8 @@
         "website": "https://www.clairesilver.com/",
         "license": "",
         "artistAddress": "0x9aAdDc5040D2093dC0dafC0803CbfcA822341BCa",
-        "secondaryArtistAddress": ""
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://QmULpucDMHg2DERJ3DdcX1oSzG46Q29vNrjzz9FuGiVKdQ"
     },
       {
         "projectId": 11,
@@ -112,7 +122,8 @@
         "website": "https://twitter.com/MrHabMo",
         "license": "CC0",
         "artistAddress": "0xAe02C419Cfc16D73feD0d5cAf852d27AAB37658C",
-        "secondaryArtistAddress": ""
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://bafybeigcitmyhmrxqfeax5fdfsvgewlcjzrbcuulgzxl3dbhyp2tdwar2e"
     },
       {
         "projectId": 12,
@@ -122,7 +133,8 @@
         "website": "https://twitter.com/Legendsartcoll1",
         "license": "CC0",
         "artistAddress": "0x58B10397d3A30342f29756e2a28e0c1ab22a8223",
-        "secondaryArtistAddress": ""
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://bafybeicyp42veiabj7ma75mhp2aid4u7eygpd3bonzwgn4jylfch2bzvpm"
     },
       {
         "projectId": 13,
@@ -132,7 +144,8 @@
         "website": "https://twitter.com/RenAI_NFT",
         "license": "CC0",
         "artistAddress": "0x1388aE7b87bdF98369D28C747642049D0078055D",
-        "secondaryArtistAddress": ""
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://bafybeieide7w77dg6wpon3hbl7awwa45zk3spxzt4vqbj6ce5ebc7ezdy4"
     },
       {
         "projectId": 14,
@@ -142,7 +155,8 @@
         "website": "https://twitter.com/thomaaas_crypto",
         "license": "RF",
         "artistAddress": "0x4fab00E016c28B8Cab90cb45Dc1A52B21f909ab0",
-        "secondaryArtistAddress": ""
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://bafybeih5aq24otv2m2u3wn6r7dxz2v33bmnqt3v77im4rhibn4lgjpzegi"
     },
       {
         "projectId": 15,
@@ -152,7 +166,8 @@
         "website": "http://manekineko.art/",
         "license": "Extended Editorial",
         "artistAddress": "0xB64c53Fe28949054dFa164Fd6dc302B94f699755",
-        "secondaryArtistAddress": ""
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://bafybeiblmuk7dxmxkghjk5t4dugqn3vdz6atq2vat2p2km3x5xz5rm6mee"
       },
     {
         "projectId": 16,
@@ -162,7 +177,8 @@
         "website": "http://hazelong.com",
         "license": "CC BY-NC-SA",
         "artistAddress": "0x06cc86506E45941dEFCf9b8339EB6C55D038464B",
-        "secondaryArtistAddress": ""
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://bafybeigwvbagachb5nsu7ubktf4fndzri6xwhluzmolclzdf3hdz33qale"
       },
     {
         "projectId": 17,
@@ -172,6 +188,7 @@
         "website": "",
         "license": "CC0",
         "artistAddress": "0xddbda06060a0ab937eea233394540dbdd60aed09",
-        "secondaryArtistAddress": ""
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://bafybeifsqlwindnlrnxh5a6descwkqrfugiq5vuinccvqx4w7cjbfd6boq"
       }
 ]}
