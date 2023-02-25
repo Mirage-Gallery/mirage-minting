@@ -14,7 +14,9 @@
         "license": "",
         "artistAddress": "0x0237765EB2C196BB1A8FCa4F0417A7c05a62682C",
         "secondaryArtistAddress": "",
-        "metadata": "ipfs://QmU7qkFDaPowZANAiAEUyueubMgJwHPPi4LYSak5NJ6JN3"
+        "metadata": "ipfs://QmU7qkFDaPowZANAiAEUyueubMgJwHPPi4LYSak5NJ6JN3",
+        "image": "ipfs://QmeF2FAy58BSJxmaps2J65ounLFVRUUJKDr3e4xvKVhCKS",
+        "banner": "ipfs://QmYcPNrzN5URjxmdn8bCr3bmWkLpgBZQSvFAeXinLuRcRx"
     },
       {
         "projectId": 2,
@@ -26,7 +28,9 @@
         "license": "",
         "artistAddress": "0x24C3833219AB8128644F37cbb51546cdfbCE6c02",
         "secondaryArtistAddress": "",
-        "metadata": "ipfs://QmPeauc7oDhp2VPyEqSdvkRu8kijEdW4ez8siTvViEMq6z"
+        "metadata": "ipfs://QmPeauc7oDhp2VPyEqSdvkRu8kijEdW4ez8siTvViEMq6z",
+        "image": "ipfs://QmXrZ3C2wnHSSFpFLAnRFwDrBugi5Ua7m3e52cb2F9uncZ",
+        "banner": "ipfs://QmR28Adr1BzYbTGXhmupbb1286WAE9ZLaKDPr59QWKhKwK"
     },
       {
         "projectId": 3,
@@ -38,7 +42,9 @@
         "license": "CC0",
         "artistAddress": "0x0Fd5d61BFC11C48B0FEC6387f7745014Aeb7D3AE",
         "secondaryArtistAddress": "",
-        "metadata": "ipfs://bafybeifvqbotgrzrmj4kncqe4zvqxoouvkpnvx7c3siriq4venviup23cy"
+        "metadata": "ipfs://bafybeifvqbotgrzrmj4kncqe4zvqxoouvkpnvx7c3siriq4venviup23cy",
+        "image": "ipfs://QmNrhBYgxBJisQBsCNYUzasrgxWqqnv8V9BUWAzCXnQ5cj",
+        "banner": "ipfs://QmWG2hDCC9Mum1vLJUs3hsjKYng9TRxSr6ZGtxdsaBZRDo"
     },
       {
         "projectId": 4,
@@ -50,7 +56,9 @@
         "license": "",
         "artistAddress": "0xa21f3597B3A6C4E1fF6E0Fc3FAf3FAd0B0634100",
         "secondaryArtistAddress": "",
-        "metadata": "ipfs://bafybeidoge7dacand4mghzrch6pqji2ignjamhtgucuy4qapiprayh52x4"
+        "metadata": "ipfs://bafybeidoge7dacand4mghzrch6pqji2ignjamhtgucuy4qapiprayh52x4",
+        "image": "ipfs://QmS7jf57JShQjbsGmHNGDrehyasovoUD44ek8vCG9GD8mC",
+        "banner": "ipfs://QmZV4GJZWBE8zUnxkQKGraoUgktiUDAS3T5iCYGzjCwnSg"
     },
       {
         "projectId": 5,
@@ -62,7 +70,9 @@
         "license": "",
         "artistAddress": "0x2CE48F39C5440BF2216ecd04663C563caE49CcAc",
         "secondaryArtistAddress": "",
-        "metadata": "ipfs://bafybeiaz24sklxxuj3hpky62x6bnsid5tcuexfal2iuoufbr3iwzpemycq"
+        "metadata": "ipfs://bafybeiaz24sklxxuj3hpky62x6bnsid5tcuexfal2iuoufbr3iwzpemycq",
+        "image": "ipfs://QmcyRv2JMWnFWX7ktxmJbpoSqFSnspmcSjaufdbdyvbWNn",
+        "banner": "ipfs://QmPVGh98k9SRn25DNp1ukpBhtzajJWNSNkeTKfXvBoQ46G"
     },
       {
         "projectId": 6,
@@ -74,7 +84,9 @@
         "license": "",
         "artistAddress": "0x7e7475980e970090B9C228fE66d8635AFd0e5e74",
         "secondaryArtistAddress": "",
-        "metadata": "ipfs://bafybeidxzvmmmv5s6ucjowaaymtyysvar6e5cgp5hmhilttukndbj3uq2q"
+        "metadata": "ipfs://bafybeidxzvmmmv5s6ucjowaaymtyysvar6e5cgp5hmhilttukndbj3uq2q",
+        "image": "ipfs://Qmd4ApGTE9T79FER924GKVSTF9vETi5ectApgJu6EjDqo4",
+        "banner": "ipfs://QmVAT3Ui1hMxpgDgkUj2CdrjnAU9XcuGRFYyBTEPPdz4sq"
     },
       {
         "projectId": 7,
@@ -86,7 +98,9 @@
         "license": "",
         "artistAddress": "0x7c4A53E6e287A097B27f8aCA6786e556223c7b32",
         "secondaryArtistAddress": "",
-        "metadata": "ipfs://bafybeibnwrjieksfnlscw5nqivjt77fjjzbdttqzcszyajihtmksm2lt44"
+        "metadata": "ipfs://bafybeibnwrjieksfnlscw5nqivjt77fjjzbdttqzcszyajihtmksm2lt44",
+        "image": "ipfs://QmYCkki26JbwjCajbMcni9wg4Ld6ubjEwW4hSHHSAH1qpn",
+        "banner": "ipfs://QmcBkYAbtA5h4oa9yQngmJFCUDgdiSESUsBrSv4CxW2Mx7"
     },
       {
         "projectId": 8,
@@ -98,7 +112,9 @@
         "license": "CC0",
         "artistAddress": "0x4d9Fd61E5324862762E456990aF0316386f5EC1E",
         "secondaryArtistAddress": "0x609521C742dB167329b09CE2025f095f106aaB4D",
-        "metadata": "ipfs://bafybeieq3wwkskhdxwgl54n27oj5ollby4e44hyexi75rby5go5wilsli4"
+        "metadata": "ipfs://bafybeieq3wwkskhdxwgl54n27oj5ollby4e44hyexi75rby5go5wilsli4",
+        "image": "ipfs://QmcRhZEGHZX51YiVnSW1FkoFzwU8uURLVqs5crEe7ck2hT",
+        "banner": "ipfs://Qmb8bmEg1uhiFnEUxZn8HswR8FQJXFEWgSdiEQxt7kDw1W"
     },
       {
         "projectId": 9,
@@ -110,7 +126,9 @@
         "license": "CC0",
         "artistAddress": "0x65A92e44d58Ed6e4049e157f1D99beE98bF595F7",
         "secondaryArtistAddress": "0x5fC13C5A541041f8fa12fab492D064435eB8d2F5",
-        "metadata": "ipfs://bafybeig5bl2v4ikv4w7pu5n7w5zh7h7z53lze4ce3m2pf4ttikpmv7fury"
+        "metadata": "ipfs://bafybeig5bl2v4ikv4w7pu5n7w5zh7h7z53lze4ce3m2pf4ttikpmv7fury",
+        "image": "ipfs://QmPDndqrrz1PjzLav4mPyTpHmX422nZippXvJ65Pt694Eq",
+        "banner": "ipfs://Qmbb9yg9PzjWV4NBCrC6b8mP9Hbhb6yKzVfsXTkwSTzVd1"
     },
       {
         "projectId": 10,
@@ -122,7 +140,9 @@
         "license": "",
         "artistAddress": "0x9aAdDc5040D2093dC0dafC0803CbfcA822341BCa",
         "secondaryArtistAddress": "",
-        "metadata": "ipfs://QmULpucDMHg2DERJ3DdcX1oSzG46Q29vNrjzz9FuGiVKdQ"
+        "metadata": "ipfs://QmULpucDMHg2DERJ3DdcX1oSzG46Q29vNrjzz9FuGiVKdQ",
+        "image": "ipfs://QmX2Z4NFq8xqanmdaJLdhHm83kHXXqqWu7fJ6xKCwnM7WE",
+        "banner": "ipfs://QmfXQe6xG6bymYSCAnSFwwAe5HvEZuzFDcHxMsrjxCkBv8"
     },
       {
         "projectId": 11,
@@ -134,7 +154,9 @@
         "license": "CC0",
         "artistAddress": "0xAe02C419Cfc16D73feD0d5cAf852d27AAB37658C",
         "secondaryArtistAddress": "",
-        "metadata": "ipfs://bafybeigcitmyhmrxqfeax5fdfsvgewlcjzrbcuulgzxl3dbhyp2tdwar2e"
+        "metadata": "ipfs://bafybeigcitmyhmrxqfeax5fdfsvgewlcjzrbcuulgzxl3dbhyp2tdwar2e",
+        "image": "ipfs://QmT6Fc31e9P7dXFCCo13y2fbwmAFTboP3qaJ9Z4fV3vj1Q",
+        "banner": "ipfs://Qmd5rwtgYTLetKjdUdK6jvji3EVgfC56KghVjbApbPyrTb"
     },
       {
         "projectId": 12,
@@ -146,7 +168,9 @@
         "license": "CC0",
         "artistAddress": "0x58B10397d3A30342f29756e2a28e0c1ab22a8223",
         "secondaryArtistAddress": "",
-        "metadata": "ipfs://bafybeicyp42veiabj7ma75mhp2aid4u7eygpd3bonzwgn4jylfch2bzvpm"
+        "metadata": "ipfs://bafybeicyp42veiabj7ma75mhp2aid4u7eygpd3bonzwgn4jylfch2bzvpm",
+        "image": "ipfs://QmVUaNAiJ7Uz7SvfkaEdSyWRf2C3HREDjFUB6usCeFLu7t",
+        "banner": "ipfs://QmQJuGxE65yKBYFTNABHUzDBETkArXraNgV5ZaP83JVr36"
     },
       {
         "projectId": 13,
@@ -158,7 +182,9 @@
         "license": "CC0",
         "artistAddress": "0x1388aE7b87bdF98369D28C747642049D0078055D",
         "secondaryArtistAddress": "",
-        "metadata": "ipfs://bafybeieide7w77dg6wpon3hbl7awwa45zk3spxzt4vqbj6ce5ebc7ezdy4"
+        "metadata": "ipfs://bafybeieide7w77dg6wpon3hbl7awwa45zk3spxzt4vqbj6ce5ebc7ezdy4",
+        "image": "ipfs://QmY7HxTz392j4GgBrWnzA2PkGpGMA1oWFKaR35JiBAnH87",
+        "banner": "ipfs://QmbaF1Ha9oSF1YdciyuW4QEh5VLiPHco41Ck862anDfweR"
     },
       {
         "projectId": 14,
@@ -170,7 +196,9 @@
         "license": "RF",
         "artistAddress": "0x4fab00E016c28B8Cab90cb45Dc1A52B21f909ab0",
         "secondaryArtistAddress": "",
-        "metadata": "ipfs://bafybeih5aq24otv2m2u3wn6r7dxz2v33bmnqt3v77im4rhibn4lgjpzegi"
+        "metadata": "ipfs://bafybeih5aq24otv2m2u3wn6r7dxz2v33bmnqt3v77im4rhibn4lgjpzegi",
+        "image": "ipfs://QmUDz9NjXQ49aPhDsMgtT6k24tGoi7jQhBCfy26RUF89gz",
+        "banner": "ipfs://QmQ3wiKuMvxdQkDuM6Zs7NjRJ7N6tybX9c65DChPhpPXAi"
     },
       {
         "projectId": 15,
@@ -182,7 +210,9 @@
         "license": "Extended Editorial",
         "artistAddress": "0xB64c53Fe28949054dFa164Fd6dc302B94f699755",
         "secondaryArtistAddress": "",
-        "metadata": "ipfs://bafybeiblmuk7dxmxkghjk5t4dugqn3vdz6atq2vat2p2km3x5xz5rm6mee"
+        "metadata": "ipfs://bafybeiblmuk7dxmxkghjk5t4dugqn3vdz6atq2vat2p2km3x5xz5rm6mee",
+        "image": "ipfs://QmdvbwZprBqryqqeVGhBsWNMpZgu17iZ4Ldzn98gV1MiHs",
+        "banner": "ipfs://QmP5vM9iA9hzf3Ske4ercwNYAtxkTZRWgJdMFTh8r9iKFa"
       },
     {
         "projectId": 16,
@@ -194,7 +224,9 @@
         "license": "CC BY-NC-SA",
         "artistAddress": "0x06cc86506E45941dEFCf9b8339EB6C55D038464B",
         "secondaryArtistAddress": "",
-        "metadata": "ipfs://bafybeigwvbagachb5nsu7ubktf4fndzri6xwhluzmolclzdf3hdz33qale"
+        "metadata": "ipfs://bafybeigwvbagachb5nsu7ubktf4fndzri6xwhluzmolclzdf3hdz33qale",
+        "image": "ipfs://QmTpqhBFCJDQ6g37vX9jkWkLDou3X6DR1jbCjCbfXw2bWf",
+        "banner": "ipfs://QmenDKQMdBP1GsGN9r1sgtrDGR8V3CUv6J4pq7PhtvWe9K"
       },
     {
         "projectId": 17,
@@ -206,6 +238,8 @@
         "license": "CC0",
         "artistAddress": "0xddbda06060a0ab937eea233394540dbdd60aed09",
         "secondaryArtistAddress": "",
-        "metadata": "ipfs://bafybeifsqlwindnlrnxh5a6descwkqrfugiq5vuinccvqx4w7cjbfd6boq"
+        "metadata": "ipfs://bafybeifsqlwindnlrnxh5a6descwkqrfugiq5vuinccvqx4w7cjbfd6boq",
+        "image": "ipfs://QmQqw62ZBiafR4dxd6NBTSmymwahwwxgrCon8h3UkpoTL5",
+        "banner": "ipfs://QmW6zyv14QCUG6S4SSme7j4BnHqSvrNZ7m8MP5X1LirWLx"
       }
 ]}
