@@ -53,7 +53,7 @@ const BeyondTheLens = () => {
   }
 
   const onPublicMintPressed = async () => {
-    let numToMint = document.getElementById('quantityPublic').value
+    let numToMint = 1
     if (numToMint == '') {
       numToMint = 1
     }
@@ -107,10 +107,9 @@ const BeyondTheLens = () => {
       <br></br>
           <button id = "reload" onClick={showRemaining} className = 'btn walletButton'>Refresh</button><br></br><br></br><br></br>
           <input id='membership' type='text' placeholder='Membership ID (0-50)' style={{width: '175px'}}/> &nbsp;&nbsp;&nbsp;
-          <input id='quantityEarly' type='text' placeholder='Quantity (1-3)' style={{width: '125px'}}/>&nbsp;&nbsp;&nbsp;
+          <input id='quantityEarly' type='text' placeholder='Quantity (1-2)' style={{width: '125px'}}/>&nbsp;&nbsp;&nbsp;
           <button id = "mintEarly" onClick={onEarlyMintPressed} className = 'btn walletButton'>Mint Presale</button><br></br><br></br><br></br>
           <br></br>
-          <input id='quantityPublic' type='text' placeholder='Quantity (1-10)' style={{width: '125px'}}/>&nbsp;&nbsp;&nbsp;
           <button id = "mintPublic" onClick={onPublicMintPressed} className = 'btn walletButton'>Mint Public Sale</button><br></br>
       <p id="remaining">
         {remaining}
