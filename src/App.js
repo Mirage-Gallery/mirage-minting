@@ -7,7 +7,6 @@ import Reinventions from './pages/reinventions';
 import EbbsandFlows from './pages/ebbsandflows';
 import CuratedMinting from './pages/curated-minting';
 import SentientClaim from './pages/sentient-claim';
-import BeyondTheLens from './pages/beyond-the-lens';
 
 function App() {
 	return (
@@ -19,7 +18,6 @@ function App() {
 	  <Route path='/ebbs-and-flows' element={<EbbsandFlows/>} />
 	  <Route path='/curated-minting' element={<CuratedMinting/>} />
 	  <Route path='/sentient-claim' element={<SentientClaim/>} />
-	  <Route path='/beyond-the-lens' element={<BeyondTheLens/>} />
 	</Routes>
 	</Router>
 	);
