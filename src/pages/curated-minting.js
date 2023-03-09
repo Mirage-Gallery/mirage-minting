@@ -131,7 +131,6 @@ const CuratedMinting = () => {
           <select name="project" id="project">
             <option value="0">Select Artist</option>
             <option value="11">MrHabMo (Esquisse)</option>
-            <option value="12">KaptN (Noah's Ark)</option>
           </select>
           <br></br><br></br><br></br>
           <input id='membership' type='text' placeholder='Membership ID (0-50)' style={{width: '175px'}}/> &nbsp;&nbsp;&nbsp;
