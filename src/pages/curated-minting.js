@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { minterContractAddress, minterContractABI, getCurrentWalletConnected, publicMint, earlyIntelligentMint, earlySentientMint, earlyCuratedHolderMint, getTokenInfo, hasSecondPhaseStarted} from "../utils/interact.js";
 import DelegateCashButton from 'delegatecash-button-react';
 
+export const alchemyUrl = process.env.REACT_APP_ALCHEMY_URL;
+
 export let selectedWallet
 function setSelectedWallet(wallet) {
     selectedWallet = wallet
@@ -135,7 +137,7 @@ const CuratedMinting = () => {
      <div style={{ display: "flex", justifyContent: "flex-end" }}>
       <DelegateCashButton
         connectedWallet={walletAddress}
-        rpcUrl="https://eth-goerli.g.alchemy.com/v2/z4-xoqLBtBbJC_m4MV4pgC0J9maRBFKw"
+        rpcUrl={alchemyUrl}
         rounded={true}
         theme="dark"
         onButtonClick={event => console.log(event.detail)}
