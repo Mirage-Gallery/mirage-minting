@@ -8,9 +8,9 @@ function setSelectedWallet(wallet) {
     selectedWallet = wallet
   }
 
-const AbstractArtchitecture = () => {
+const SurrealDreams = () => {
 
-  let overallID = 11
+  let overallID = 18
 
   const minterAddress = minterContractAddress
   const minterABI = minterContractABI
@@ -54,7 +54,8 @@ const AbstractArtchitecture = () => {
 }, [])
 
   const onPublicMintPressed = async () => {
-    let numToMint = document.getElementById('quantityPublic').value
+    //let numToMint = document.getElementById('quantityPublic').value
+    let numToMint = 1
     if (numToMint === '') {
       numToMint = 1
     }
@@ -125,7 +126,6 @@ const AbstractArtchitecture = () => {
           <input id='membership' type='text' placeholder='Membership ID (0-50)' style={{width: '175px'}}/> &nbsp;&nbsp;&nbsp;
           <button id = "mintEarly" onClick={onEarlyMintPressed} className = 'btn walletButton'>Mint Presale</button><br></br><br></br><br></br>
           <br></br>
-          <input id='quantityPublic' type='text' placeholder='Quantity' style={{width: '75px'}}/>&nbsp;&nbsp;&nbsp;
           <button id = "mintPublic" onClick={onPublicMintPressed} className = 'btn walletButton'>Mint Public Sale</button><br></br>
       <p id="remaining">
         {remaining}
@@ -136,5 +136,6 @@ const AbstractArtchitecture = () => {
     </div>
   );
 };
+//<input id='quantityPublic' type='text' placeholder='Quantity' style={{width: '75px'}}/>&nbsp;&nbsp;&nbsp;
 
-export default AbstractArtchitecture;
+export default SurrealDreams;

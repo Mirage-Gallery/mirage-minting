@@ -241,5 +241,19 @@
         "metadata": "ipfs://bafybeifsqlwindnlrnxh5a6descwkqrfugiq5vuinccvqx4w7cjbfd6boq",
         "image": "ipfs://QmQqw62ZBiafR4dxd6NBTSmymwahwwxgrCon8h3UkpoTL5",
         "banner": "ipfs://QmW6zyv14QCUG6S4SSme7j4BnHqSvrNZ7m8MP5X1LirWLx"
+      },
+      {
+        "projectId": 18,
+        "dropName": "Surreal Dreams",
+        "name": "Sub-Liminal",
+        "artist": "Kaysurreal",
+        "description": "Sub-Liminal examines liminal space through the use of AI. A bridge between reality and the dreamworld aids to give us a glimpse of liminal spaces of our dreams. Liminal spaces that may give us glimpses of the surreal, the unnerving, and even serenity depending on the dreamer.  AI is used to transform fantastical descriptions into images that occupy a liminal space between the real and the imaginary. We dream of strange rooms, scenes and dwellings that could not possibly exist. Sub-Liminal gives us snapshots, hopefully satisfying the need to take another glimpse of a past dream. Sub-Liminal interrogates the notion of the liminal in relation to the virtual and the imaginary, and highlights the potential for AI-generated art to push the boundaries of traditional art forms. Exploring liminal space through AI lets us explore and engage with the boundaries between the real and the imaginary and the known and the unknown.",
+        "website": "",
+        "license": "CC BY-NC-SA",
+        "artistAddress": "0x2636e85160527F9A6FC6B1F7d6dc5b12e687104e",
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://bafybeifl7u2i6ctihwa5prwor4ll5jlks73supx7q7h6g3ip6jjv7kbv64",
+        "image": "ipfs://QmSDX9znsvey3uPMYdJRUcbsUvvSJX64GgizYhyUajrXx2",
+        "banner": "ipfs://QmX9zoH1kodb3pJpRQLAWh5xDq7MBVrWAF3JpA1tgBYMkx"
       }
 ]}

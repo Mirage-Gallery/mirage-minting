@@ -4,9 +4,22 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyKey);
 
 export const curatedContractABI = require('../curated-abi.json')
-export const curatedContractAddress = "0xb7ec7bbd2d2193b47027247fc666fb342d23c4b5";
+export const curatedContractAddress = "0xb7eC7bbd2d2193B47027247FC666fB342D23c4B5"
+
 export const dreamersABI = require('../dreamers-abi.json')
-export const dreamersContract = "0xfd29cdc7868cacece537571bd0c879df55f2bc51";
+export const dreamersContract = "0xfd29cdc7868cacece537571bd0c879df55f2bc51"
+
+export const minterContractABI = require('../minter-abi.json')
+export const minterContractAddress = "0xcd484E37931f62013E6BD47FdA62C21480248B47"
+
+export async function hasSecondPhaseStarted(projectID) {
+  window.contract = new web3.eth.Contract(minterContractABI, minterContractAddress);
+  let presalePhase = web3.eth.call({
+  to: minterContractAddress,
+  data: window.contract.methods.secondPresalePhase(projectID).encodeABI()
+  }).then(data => presalePhase = data);
+  return web3.eth.abi.decodeParameters(minterContractABI[21].outputs, await presalePhase)
+}
 
 export async function getTokenInfo(projectID) {
     window.contract = new web3.eth.Contract(curatedContractABI, curatedContractAddress);
@@ -45,50 +58,47 @@ return web3.eth.abi.decodeParameters(curatedContractABI[60].outputs, await nextP
 }
 
 export const publicMint = async(minterContract, minterABI, projectID, numToMint) => {
-    let projTokenInfo = await getTokenInfo(projectID)
-    let priceInWei = (projTokenInfo[1] * numToMint)
-    window.contract = new web3.eth.Contract(minterABI, minterContract)
-    if (projTokenInfo[8]) {
-      return { status: "😥 Not in public phase. Use presale minting option instead!" }
-    }
-    if (numToMint > 10) {
-        return { status: "😥 Can't mint more than 10 at a time!" }
-    } else {
-        const transactionParameters = {
-            to: minterContract,
-            from: window.ethereum.selectedAddress,
-            value: priceInWei.toString(16),
-            data: window.contract.methods.purchase(projectID, numToMint).encodeABI()
-        };
+  let projTokenInfo = await getTokenInfo(projectID)
+  let priceInWei = (projTokenInfo[1] * numToMint)
+  window.contract = new web3.eth.Contract(minterABI, minterContract)
+  if (projTokenInfo[8]) {
+    return { status: "😥 Not in public phase. Use presale minting option instead!" }
+  }
+  if (numToMint > 10) {
+      return { status: "😥 Can't mint more than 10 at a time!" }
+  } else {
+      const transactionParameters = {
+          to: minterContract,
+          from: window.ethereum.selectedAddress,
+          value: priceInWei.toString(16),
+          data: window.contract.methods.purchase(projectID, numToMint).encodeABI()
+      };
 
-        try {
-            const txHash = await window.ethereum
-                .request({
-                    method: 'eth_sendTransaction',
-                    params: [transactionParameters],
-                });
-            return {
-                success: true,
-                status: "✅ Check out your transaction on Etherscan: https://etherscan.io/tx/" + txHash
-            }
-        } catch (error) {
-            return {
-                success: false,
-                status: "😥 Something went wrong: " + error.message
-            }
-        }
+      try {
+          const txHash = await window.ethereum
+              .request({
+                  method: 'eth_sendTransaction',
+                  params: [transactionParameters],
+              });
+          return {
+              success: true,
+              status: "✅ Check out your transaction on Etherscan: https://etherscan.io/tx/" + txHash
+          }
+      } catch (error) {
+          return {
+              success: false,
+              status: "😥 Something went wrong: " + error.message
+          }
+      }
    }
 }
 
-export const earlyMint = async(minterContract, minterABI, projectID, membershipID, numToMint) => {
+export const earlyIntelligentMint = async(minterContract, minterABI, projectID, membershipID, numToMint, selectedAddress) => {
     let projTokenInfo = await getTokenInfo(projectID)
     let priceInWei = (projTokenInfo[1] * numToMint)
     window.contract = new web3.eth.Contract(minterABI, minterContract)
     if (!projTokenInfo[8]) {
       return { status: "😥 Not in presale phase. Use public minting option instead!" }
-    }
-    if (membershipID > 50 || membershipID === '') {
-        return { status: "😥 Enter a valid membership ID (0-50)" }
     }
     if (numToMint > 3) {
         return { status: "😥 Can't mint more than 3 at a time during the presale!" }
@@ -97,7 +107,7 @@ export const earlyMint = async(minterContract, minterABI, projectID, membershipI
             to: minterContract,
             from: window.ethereum.selectedAddress,
             value: priceInWei.toString(16),
-            data: window.contract.methods.earlyPurchase(projectID, membershipID, numToMint).encodeABI()
+            data: window.contract.methods.earlyIntelligentPurchase(projectID, numToMint, selectedAddress).encodeABI()
         };
 
         try {
@@ -118,6 +128,80 @@ export const earlyMint = async(minterContract, minterABI, projectID, membershipI
         }
    }
 }
+
+export const earlyCuratedHolderMint = async(minterContract, minterABI, projectID, numToMint, selectedAddress) => {
+  let projTokenInfo = await getTokenInfo(projectID)
+  let priceInWei = (projTokenInfo[1] * numToMint)
+  window.contract = new web3.eth.Contract(minterABI, minterContract)
+  if (!projTokenInfo[8]) {
+    return { status: "😥 Not in presale phase. Use public minting option instead!" }
+  }
+  if (numToMint > 3) {
+      return { status: "😥 Can't mint more than 3 at a time during the presale!" }
+  } else {
+      const transactionParameters = {
+          to: minterContract,
+          from: window.ethereum.selectedAddress,
+          value: priceInWei.toString(16),
+          data: window.contract.methods.earlyCuratedHolderPurchase(projectID, numToMint, selectedAddress).encodeABI()
+      };
+
+      try {
+          const txHash = await window.ethereum
+              .request({
+                  method: 'eth_sendTransaction',
+                  params: [transactionParameters],
+              });
+          return {
+              success: true,
+              status: "✅ Check out your transaction on Etherscan: https://etherscan.io/tx/" + txHash
+          }
+      } catch (error) {
+          return {
+              success: false,
+              status: "😥 Something went wrong: " + error.message
+          }
+      }
+ }
+}
+
+export const earlySentientMint = async(minterContract, minterABI, projectID, membershipID, numToMint, selectedAddress) => {
+  let projTokenInfo = await getTokenInfo(projectID)
+  let priceInWei = (projTokenInfo[1] * numToMint)
+  window.contract = new web3.eth.Contract(minterABI, minterContract)
+  console.log(selectedAddress)
+  if (!projTokenInfo[8]) {
+    return { status: "😥 Not in presale phase. Use public minting option instead!" }
+  }
+  if (numToMint > 3) {
+      return { status: "😥 Can't mint more than 3 at a time during the presale!" }
+  } else {
+      const transactionParameters = {
+          to: minterContract,
+          from: window.ethereum.selectedAddress,
+          value: priceInWei.toString(16),
+          data: window.contract.methods.earlySentientPurchase(projectID, membershipID, numToMint, selectedAddress).encodeABI()
+      };
+
+      try {
+          const txHash = await window.ethereum
+              .request({
+                  method: 'eth_sendTransaction',
+                  params: [transactionParameters],
+              });
+          return {
+              success: true,
+              status: "✅ Check out your transaction on Etherscan: https://etherscan.io/tx/" + txHash
+          }
+      } catch (error) {
+          return {
+              success: false,
+              status: "😥 Something went wrong: " + error.message
+          }
+      }
+ }
+}
+
 const checkDreamersClaimed = async(membershipID) => {
   window.contract = new web3.eth.Contract(dreamersABI, dreamersContract)
   let dreamersClaimed = web3.eth.call({

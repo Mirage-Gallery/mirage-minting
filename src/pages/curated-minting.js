@@ -1,8 +1,50 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { connectWallet, getCurrentWalletConnected, publicMint, earlyMint, getTokenInfo } from "../utils/interact.js";
+import { minterContractAddress, minterContractABI, getCurrentWalletConnected, publicMint, earlyIntelligentMint, earlySentientMint, earlyCuratedHolderMint, getTokenInfo, hasSecondPhaseStarted} from "../utils/interact.js";
+import DelegateCashButton from 'delegatecash-button-react';
+
+export let selectedWallet
+function setSelectedWallet(wallet) {
+    selectedWallet = wallet
+  }
 
 const CuratedMinting = () => {
+
+  let overallID
+  const minterAddress = minterContractAddress
+  const minterABI = minterContractABI
+
+  const [walletAddress, setWallet] = useState("")
+  const [status, setStatus] = useState("")
+  const [remaining, setRemaining] = useState("")
+
+  const showRemaining = async () => {
+    overallID = document.getElementById('project').value
+    let presalePhase = "1"
+    if ((await hasSecondPhaseStarted(overallID))[0]) {
+      presalePhase = "2"
+    }
+    if (overallID == 0) {
+      setRemaining('')
+      return
+    }
+    const projTokenInfo = await getTokenInfo(overallID)
+    let remaining = 'Minting is either closed, or has not opened yet!'
+    if (projTokenInfo[8]) {
+      let remPre = projTokenInfo[4] - (projTokenInfo[2]-50)
+      if (remPre == 0) {
+        remaining = 'Presale is sold out!'
+      } else {
+        remaining = remPre + '/' + projTokenInfo[4] + ' remaining (for presale). Presale phase: ' + presalePhase
+      }
+    } else if (parseInt(projTokenInfo[2]) == parseInt(projTokenInfo[3])) {
+      remaining = 'Sold out!'
+    } else if (projTokenInfo[7]) {
+      const remPub = projTokenInfo[3] - projTokenInfo[2];
+      remaining = remPub + '/' + projTokenInfo[3] + ' remaining'
+    }
+    setRemaining(remaining)
+  }
 
   let selection = document.querySelector('select');
   if (selection) {
@@ -11,12 +53,6 @@ const CuratedMinting = () => {
       setStatus()
     });
   }
-  let overallID
-  const minterAddress = "0xE4C2BF5E734A23e426022bb0b785804C87684A3d"
-
-  const [walletAddress, setWallet] = useState("")
-  const [status, setStatus] = useState("")
-  const [remaining, setRemaining] = useState("")
 
   function addWalletListener() {
     if (window.ethereum) {
@@ -48,16 +84,10 @@ const CuratedMinting = () => {
   useEffect(async () => {
     const {address, status} = await getCurrentWalletConnected();
     setWallet(address)
-    setStatus(status);
-
-    addWalletListener(); 
+    setSelectedWallet(address)
+    setStatus(status)
+    addWalletListener()
 }, [])
-
-  const connectWalletPressed = async () => {
-    const walletResponse = await connectWallet();
-    setStatus(walletResponse.status);
-    setWallet(walletResponse.address);
-  }
 
   const onPublicMintPressed = async () => {
     overallID = document.getElementById('project').value
@@ -69,7 +99,6 @@ const CuratedMinting = () => {
     if (numToMint == '') {
       numToMint = 1
     }
-    const minterABI = require('../minter-abi.json')
     const { status } = await publicMint(minterAddress, minterABI, overallID, numToMint)
     setStatus(status)
   }
@@ -80,64 +109,52 @@ const CuratedMinting = () => {
       setStatus("Select an artist from the dropdown menu above")
       return
     }
-    let numToMint = document.getElementById('quantityEarly').value
+    let numToMint = 1
     let membershipID = document.getElementById('membership').value
     if (numToMint == '') {
       numToMint = 1
     }
-    const minterABI = require('../minter-abi.json')
-    const { status } = await earlyMint(minterAddress, minterABI, overallID, membershipID, numToMint)
-    setStatus(status)
-  }
-
-  const showRemaining = async () => {
-    overallID = document.getElementById('project').value
-    if (overallID == 0) {
-      setRemaining('')
-      return
-    }
-    const projTokenInfo = await getTokenInfo(overallID)
-    let remaining = 'Minting is either closed, or has not opened yet!'
-    if (projTokenInfo[8]) {
-      let remPre = projTokenInfo[4] - (projTokenInfo[2]-50)
-      if (remPre == 0) {
-        remaining = 'Presale is sold out!'
+    if (membershipID == '' && !(await hasSecondPhaseStarted(overallID))[0]) {
+      setStatus("Phase 2 hasn't started! Please enter membership ID")
+    } else if (membershipID == '' && (await hasSecondPhaseStarted(overallID))[0]) {
+      const { status } = await earlyCuratedHolderMint(minterAddress, minterABI, overallID, numToMint, selectedWallet)
+      setStatus(status)
+    } else {
+      if (membershipID < 50) {
+        const { status } = await earlySentientMint(minterAddress, minterABI, overallID, membershipID, numToMint, selectedWallet)
+        setStatus(status)
       } else {
-        remaining = remPre + '/' + projTokenInfo[4] + ' remaining (for presale)'
+        const { status } = await earlyIntelligentMint(minterAddress, minterABI, overallID, membershipID, numToMint, selectedWallet)
+        setStatus(status)
       }
-    } else if (parseInt(projTokenInfo[2]) == parseInt(projTokenInfo[3])) {
-      remaining = 'Sold out!'
-    } else if (projTokenInfo[7]) {
-      const remPub = projTokenInfo[3] - projTokenInfo[2];
-      remaining = remPub + '/' + projTokenInfo[3] + ' remaining'
     }
-    setRemaining(remaining)
   }
 
   return (
     <div className="Minter">
-      <button id="walletButton" onClick={connectWalletPressed}>
-        {walletAddress.length > 0 ? (
-          "Connected: " +
-          String(walletAddress).substring(0, 6) +
-          "..." +
-          String(walletAddress).substring(38)
-        ) : (
-          <span>Connect Wallet</span>
-        )}
-      </button>
+     <div style={{ display: "flex", justifyContent: "flex-end" }}>
+      <DelegateCashButton
+        connectedWallet={walletAddress}
+        rpcUrl="https://eth-goerli.g.alchemy.com/v2/z4-xoqLBtBbJC_m4MV4pgC0J9maRBFKw"
+        rounded={true}
+        theme="dark"
+        onButtonClick={event => console.log(event.detail)}
+        onWalletSelect={event => setSelectedWallet(event.detail)}
+      />
+    </div>
       <br></br>
           <button id = "reload" onClick={showRemaining} className = 'btn walletButton'>Refresh</button><br></br><br></br><br></br>
           <select name="project" id="project">
             <option value="0">Select Artist</option>
             <option value="11">MrHabMo (Esquisse)</option>
+            <option value="18">Kaysurreal (Sub-Liminal)</option>
           </select>
           <br></br><br></br><br></br>
+          <p>Leave membership field blank for eligible curated holders during second presale phase.</p>
           <input id='membership' type='text' placeholder='Membership ID (0-50)' style={{width: '175px'}}/> &nbsp;&nbsp;&nbsp;
-          <input id='quantityEarly' type='text' placeholder='Quantity (1-2)' style={{width: '125px'}}/>&nbsp;&nbsp;&nbsp;
           <button id = "mintEarly" onClick={onEarlyMintPressed} className = 'btn walletButton'>Mint Presale</button><br></br><br></br><br></br>
           <br></br>
-          <input id='quantityPublic' type='text' placeholder='Quantity (1-10)' style={{width: '125px'}}/>&nbsp;&nbsp;&nbsp;
+          <input id='quantityPublic' type='text' placeholder='Quantity' style={{width: '75px'}}/>&nbsp;&nbsp;&nbsp;
           <button id = "mintPublic" onClick={onPublicMintPressed} className = 'btn walletButton'>Mint Public Sale</button><br></br>
       <p id="remaining">
         {remaining}

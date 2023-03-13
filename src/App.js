@@ -5,6 +5,7 @@ import Home from './pages';
 import AbstractArtchitecture from './pages/abstract-artchitecture';
 import CuratedMinting from './pages/curated-minting';
 import SentientClaim from './pages/sentient-claim';
+import SurrealDreams from './pages/surreal-dreams';
 
 function App() {
 	return (
@@ -12,6 +13,7 @@ function App() {
 	<Routes>
 	  <Route exact path='/' element={<Home />} />
 	  <Route path='/abstract-artchitecture' element={<AbstractArtchitecture/>} />
+	  <Route path='/surreal-dreams' element={<SurrealDreams/>} />
 	  <Route path='/curated-minting' element={<CuratedMinting/>} />
 	  <Route path='/sentient-claim' element={<SentientClaim/>} />
 	</Routes>
