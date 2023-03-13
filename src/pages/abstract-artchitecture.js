@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { minterContractAddress, minterContractABI, getCurrentWalletConnected, publicMint, earlyIntelligentMint, earlySentientMint, earlyCuratedHolderMint, getTokenInfo, hasSecondPhaseStarted } from "../utils/interact.js";
+import { connectWallet, minterContractAddress, minterContractABI, getCurrentWalletConnected, publicMint, earlyIntelligentMint, earlySentientMint, earlyCuratedHolderMint, getTokenInfo, hasSecondPhaseStarted } from "../utils/interact.js";
 import DelegateCashButton from 'delegatecash-button-react';
 
 export let selectedWallet
@@ -52,6 +52,12 @@ const AbstractArtchitecture = () => {
     setStatus(status)
     addWalletListener()
 }, [])
+
+  const connectWalletPressed = async () => {
+    const walletResponse = await connectWallet();
+    setStatus(walletResponse.status);
+    setWallet(walletResponse.address);
+  }
 
   const onPublicMintPressed = async () => {
     let numToMint = document.getElementById('quantityPublic').value
@@ -115,7 +121,7 @@ const AbstractArtchitecture = () => {
           rpcUrl="https://eth-goerli.g.alchemy.com/v2/z4-xoqLBtBbJC_m4MV4pgC0J9maRBFKw"
           rounded={true}
           theme="dark"
-          onButtonClick={event => console.log(event.detail)}
+          onButtonClick={() => connectWalletPressed()}
           onWalletSelect={event => setSelectedWallet(event.detail)}
         />
         </div>

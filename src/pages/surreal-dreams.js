@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { minterContractAddress, minterContractABI, getCurrentWalletConnected, publicMint, earlyIntelligentMint, earlySentientMint, earlyCuratedHolderMint, getTokenInfo, hasSecondPhaseStarted } from "../utils/interact.js";
+import { connectWallet, minterContractAddress, minterContractABI, getCurrentWalletConnected, publicMint, earlyIntelligentMint, earlySentientMint, earlyCuratedHolderMint, getTokenInfo, hasSecondPhaseStarted } from "../utils/interact.js";
 import DelegateCashButton from 'delegatecash-button-react';
 import { alchemyUrl } from "./curated-minting.js"
 
@@ -53,6 +53,12 @@ const SurrealDreams = () => {
     setStatus(status)
     addWalletListener()
 }, [])
+
+  const connectWalletPressed = async () => {
+    const walletResponse = await connectWallet();
+    setStatus(walletResponse.status);
+    setWallet(walletResponse.address);
+  }
 
   const onPublicMintPressed = async () => {
     //let numToMint = document.getElementById('quantityPublic').value
@@ -117,7 +123,7 @@ const SurrealDreams = () => {
           rpcUrl={alchemyUrl}
           rounded={true}
           theme="dark"
-          onButtonClick={event => console.log(event.detail)}
+          onButtonClick={() => connectWalletPressed()}
           onWalletSelect={event => setSelectedWallet(event.detail)}
         />
         </div>
