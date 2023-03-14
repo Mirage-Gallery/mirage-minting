@@ -16,7 +16,9 @@
         "secondaryArtistAddress": "",
         "metadata": "ipfs://QmU7qkFDaPowZANAiAEUyueubMgJwHPPi4LYSak5NJ6JN3",
         "IPFSImage": "ipfs://QmeF2FAy58BSJxmaps2J65ounLFVRUUJKDr3e4xvKVhCKS",
-        "IPFSBanner": "ipfs://QmYcPNrzN5URjxmdn8bCr3bmWkLpgBZQSvFAeXinLuRcRx"
+        "IPFSBanner": "ipfs://QmYcPNrzN5URjxmdn8bCr3bmWkLpgBZQSvFAeXinLuRcRx",
+        "image": "https://account.miragegallery.ai/CollectionImages/ebbsAndFlows/Ebbs-and-Flows-somnai.png",
+        "banner": "https://account.miragegallery.ai/CollectionImages/ebbsAndFlows/banner_somnai.jpeg"
     },
       {
         "projectId": 2,
@@ -30,7 +32,9 @@
         "secondaryArtistAddress": "",
         "metadata": "ipfs://QmPeauc7oDhp2VPyEqSdvkRu8kijEdW4ez8siTvViEMq6z",
         "IPFSImage": "ipfs://QmXrZ3C2wnHSSFpFLAnRFwDrBugi5Ua7m3e52cb2F9uncZ",
-        "IPFSBanner": "ipfs://QmR28Adr1BzYbTGXhmupbb1286WAE9ZLaKDPr59QWKhKwK"
+        "IPFSBanner": "ipfs://QmR28Adr1BzYbTGXhmupbb1286WAE9ZLaKDPr59QWKhKwK",
+        "image": "https://account.miragegallery.ai/CollectionImages/ebbsAndFlows/Ebbs-and-flows-roope.jpeg",
+        "banner": "https://account.miragegallery.ai/CollectionImages/ebbsAndFlows/banner_roope.jpeg"
     },
       {
         "projectId": 3,
@@ -44,7 +48,9 @@
         "secondaryArtistAddress": "",
         "metadata": "ipfs://bafybeifvqbotgrzrmj4kncqe4zvqxoouvkpnvx7c3siriq4venviup23cy",
         "IPFSImage": "ipfs://QmNrhBYgxBJisQBsCNYUzasrgxWqqnv8V9BUWAzCXnQ5cj",
-        "IPFSBanner": "ipfs://QmWG2hDCC9Mum1vLJUs3hsjKYng9TRxSr6ZGtxdsaBZRDo"
+        "IPFSBanner": "ipfs://QmWG2hDCC9Mum1vLJUs3hsjKYng9TRxSr6ZGtxdsaBZRDo",
+        "image": "https://account.miragegallery.ai/CollectionImages/lifeAndDeath/Life-and-death.png",
+        "banner": "https://account.miragegallery.ai/CollectionImages/lifeAndDeath/banner.jpeg"
     },
       {
         "projectId": 4,
@@ -58,7 +64,9 @@
         "secondaryArtistAddress": "",
         "metadata": "ipfs://bafybeidoge7dacand4mghzrch6pqji2ignjamhtgucuy4qapiprayh52x4",
         "IPFSImage": "ipfs://QmS7jf57JShQjbsGmHNGDrehyasovoUD44ek8vCG9GD8mC",
-        "IPFSBanner": "ipfs://QmZV4GJZWBE8zUnxkQKGraoUgktiUDAS3T5iCYGzjCwnSg"
+        "IPFSBanner": "ipfs://QmZV4GJZWBE8zUnxkQKGraoUgktiUDAS3T5iCYGzjCwnSg",
+        "image": "https://account.miragegallery.ai/CollectionImages/thenAndNow/Then-and-now.png",
+        "banner": "https://account.miragegallery.ai/CollectionImages/thenAndNow/banner.jpeg"
     },
       {
         "projectId": 5,
@@ -72,7 +80,9 @@
         "secondaryArtistAddress": "",
         "metadata": "ipfs://bafybeiaz24sklxxuj3hpky62x6bnsid5tcuexfal2iuoufbr3iwzpemycq",
         "IPFSImage": "ipfs://QmcyRv2JMWnFWX7ktxmJbpoSqFSnspmcSjaufdbdyvbWNn",
-        "IPFSBanner": "ipfs://QmPVGh98k9SRn25DNp1ukpBhtzajJWNSNkeTKfXvBoQ46G"
+        "IPFSBanner": "ipfs://QmPVGh98k9SRn25DNp1ukpBhtzajJWNSNkeTKfXvBoQ46G",
+        "image": "https://account.miragegallery.ai/CollectionImages/incoherentElegance/Incoherent-elegance.jpg",
+        "banner": "https://account.miragegallery.ai/CollectionImages/incoherentElegance/banner.jpeg"
     },
       {
         "projectId": 6,
@@ -86,7 +96,9 @@
         "secondaryArtistAddress": "",
         "metadata": "ipfs://bafybeidxzvmmmv5s6ucjowaaymtyysvar6e5cgp5hmhilttukndbj3uq2q",
         "IPFSImage": "ipfs://Qmd4ApGTE9T79FER924GKVSTF9vETi5ectApgJu6EjDqo4",
-        "IPFSBanner": "ipfs://QmVAT3Ui1hMxpgDgkUj2CdrjnAU9XcuGRFYyBTEPPdz4sq"
+        "IPFSBanner": "ipfs://QmVAT3Ui1hMxpgDgkUj2CdrjnAU9XcuGRFYyBTEPPdz4sq",
+        "image": "https://account.miragegallery.ai/CollectionImages/latentTravels/Latent-travels.jpg",
+        "banner": "https://account.miragegallery.ai/CollectionImages/latentTravels/banner.jpeg"
     },
       {
         "projectId": 7,
@@ -100,7 +112,9 @@
         "secondaryArtistAddress": "",
         "metadata": "ipfs://bafybeibnwrjieksfnlscw5nqivjt77fjjzbdttqzcszyajihtmksm2lt44",
         "IPFSImage": "ipfs://QmYCkki26JbwjCajbMcni9wg4Ld6ubjEwW4hSHHSAH1qpn",
-        "IPFSBanner": "ipfs://QmcBkYAbtA5h4oa9yQngmJFCUDgdiSESUsBrSv4CxW2Mx7"
+        "IPFSBanner": "ipfs://QmcBkYAbtA5h4oa9yQngmJFCUDgdiSESUsBrSv4CxW2Mx7",
+        "image": "https://account.miragegallery.ai/CollectionImages/newDimension/New-dimension.jpg",
+        "banner": "https://account.miragegallery.ai/CollectionImages/newDimension/banner.jpeg"
     },
       {
         "projectId": 8,
@@ -114,7 +128,9 @@
         "secondaryArtistAddress": "0x609521C742dB167329b09CE2025f095f106aaB4D",
         "metadata": "ipfs://bafybeieq3wwkskhdxwgl54n27oj5ollby4e44hyexi75rby5go5wilsli4",
         "IPFSImage": "ipfs://QmcRhZEGHZX51YiVnSW1FkoFzwU8uURLVqs5crEe7ck2hT",
-        "IPFSBanner": "ipfs://Qmb8bmEg1uhiFnEUxZn8HswR8FQJXFEWgSdiEQxt7kDw1W"
+        "IPFSBanner": "ipfs://Qmb8bmEg1uhiFnEUxZn8HswR8FQJXFEWgSdiEQxt7kDw1W",
+        "image": "https://account.miragegallery.ai/CollectionImages/entangledStructures/Entangled-structures.png",
+        "banner": "https://account.miragegallery.ai/CollectionImages/entangledStructures/banner.jpeg"
     },
       {
         "projectId": 9,
@@ -128,7 +144,9 @@
         "secondaryArtistAddress": "0x5fC13C5A541041f8fa12fab492D064435eB8d2F5",
         "metadata": "ipfs://bafybeig5bl2v4ikv4w7pu5n7w5zh7h7z53lze4ce3m2pf4ttikpmv7fury",
         "IPFSImage": "ipfs://QmPDndqrrz1PjzLav4mPyTpHmX422nZippXvJ65Pt694Eq",
-        "IPFSBanner": "ipfs://Qmbb9yg9PzjWV4NBCrC6b8mP9Hbhb6yKzVfsXTkwSTzVd1"
+        "IPFSBanner": "ipfs://Qmbb9yg9PzjWV4NBCrC6b8mP9Hbhb6yKzVfsXTkwSTzVd1",
+        "image": "https://account.miragegallery.ai/CollectionImages/artificialPathways/Artificial-pathways.jpg",
+        "banner": "https://account.miragegallery.ai/CollectionImages/artificialPathways/banner.jpeg"
     },
       {
         "projectId": 10,
@@ -142,7 +160,9 @@
         "secondaryArtistAddress": "",
         "metadata": "ipfs://QmULpucDMHg2DERJ3DdcX1oSzG46Q29vNrjzz9FuGiVKdQ",
         "IPFSImage": "ipfs://QmX2Z4NFq8xqanmdaJLdhHm83kHXXqqWu7fJ6xKCwnM7WE",
-        "IPFSBanner": "ipfs://QmfXQe6xG6bymYSCAnSFwwAe5HvEZuzFDcHxMsrjxCkBv8"
+        "IPFSBanner": "ipfs://QmfXQe6xG6bymYSCAnSFwwAe5HvEZuzFDcHxMsrjxCkBv8",
+        "image": "https://account.miragegallery.ai/CollectionImages/AIAINA/AI-Art-is-not-Art.jpeg",
+        "banner": "https://account.miragegallery.ai/CollectionImages/AIAINA/banner.jpeg"
     },
       {
         "projectId": 11,
@@ -156,7 +176,9 @@
         "secondaryArtistAddress": "",
         "metadata": "ipfs://bafybeigcitmyhmrxqfeax5fdfsvgewlcjzrbcuulgzxl3dbhyp2tdwar2e",
         "IPFSImage": "ipfs://QmT6Fc31e9P7dXFCCo13y2fbwmAFTboP3qaJ9Z4fV3vj1Q",
-        "IPFSBanner": "ipfs://Qmd5rwtgYTLetKjdUdK6jvji3EVgfC56KghVjbApbPyrTb"
+        "IPFSBanner": "ipfs://Qmd5rwtgYTLetKjdUdK6jvji3EVgfC56KghVjbApbPyrTb",
+        "image": "https://account.miragegallery.ai/CollectionImages/abstractArtchitecture/Abstract-ARTchitecture.jpg",
+        "banner": "https://account.miragegallery.ai/CollectionImages/abstractArtchitecture/banner.jpeg"
     },
       {
         "projectId": 12,
@@ -170,7 +192,9 @@
         "secondaryArtistAddress": "",
         "metadata": "ipfs://bafybeicyp42veiabj7ma75mhp2aid4u7eygpd3bonzwgn4jylfch2bzvpm",
         "IPFSImage": "ipfs://QmVUaNAiJ7Uz7SvfkaEdSyWRf2C3HREDjFUB6usCeFLu7t",
-        "IPFSBanner": "ipfs://QmQJuGxE65yKBYFTNABHUzDBETkArXraNgV5ZaP83JVr36"
+        "IPFSBanner": "ipfs://QmQJuGxE65yKBYFTNABHUzDBETkArXraNgV5ZaP83JVr36",
+        "image": "https://account.miragegallery.ai/CollectionImages/reinventions/Reinventions.jpeg",
+        "banner": "https://account.miragegallery.ai/CollectionImages/reinventions/banner.jpeg"
     },
       {
         "projectId": 13,
@@ -184,7 +208,9 @@
         "secondaryArtistAddress": "",
         "metadata": "ipfs://bafybeieide7w77dg6wpon3hbl7awwa45zk3spxzt4vqbj6ce5ebc7ezdy4",
         "IPFSImage": "ipfs://QmY7HxTz392j4GgBrWnzA2PkGpGMA1oWFKaR35JiBAnH87",
-        "IPFSBanner": "ipfs://QmbaF1Ha9oSF1YdciyuW4QEh5VLiPHco41Ck862anDfweR"
+        "IPFSBanner": "ipfs://QmbaF1Ha9oSF1YdciyuW4QEh5VLiPHco41Ck862anDfweR",
+        "image": "https://account.miragegallery.ai/CollectionImages/lostMemories/Lost-memories.jpg",
+        "banner": "https://account.miragegallery.ai/CollectionImages/lostMemories/banner.jpeg"
     },
       {
         "projectId": 14,
@@ -198,7 +224,9 @@
         "secondaryArtistAddress": "",
         "metadata": "ipfs://bafybeih5aq24otv2m2u3wn6r7dxz2v33bmnqt3v77im4rhibn4lgjpzegi",
         "IPFSImage": "ipfs://QmUDz9NjXQ49aPhDsMgtT6k24tGoi7jQhBCfy26RUF89gz",
-        "IPFSBanner": "ipfs://QmQ3wiKuMvxdQkDuM6Zs7NjRJ7N6tybX9c65DChPhpPXAi"
+        "IPFSBanner": "ipfs://QmQ3wiKuMvxdQkDuM6Zs7NjRJ7N6tybX9c65DChPhpPXAi",
+        "image": "https://account.miragegallery.ai/CollectionImages/syntheticHorizons/Synthetic-horizons.jpg",
+        "banner": "https://account.miragegallery.ai/CollectionImages/syntheticHorizons/banner.jpeg"
     },
       {
         "projectId": 15,
@@ -212,7 +240,9 @@
         "secondaryArtistAddress": "",
         "metadata": "ipfs://bafybeiblmuk7dxmxkghjk5t4dugqn3vdz6atq2vat2p2km3x5xz5rm6mee",
         "IPFSImage": "ipfs://QmdvbwZprBqryqqeVGhBsWNMpZgu17iZ4Ldzn98gV1MiHs",
-        "IPFSBanner": "ipfs://QmP5vM9iA9hzf3Ske4ercwNYAtxkTZRWgJdMFTh8r9iKFa"
+        "IPFSBanner": "ipfs://QmP5vM9iA9hzf3Ske4ercwNYAtxkTZRWgJdMFTh8r9iKFa",
+        "image": "https://account.miragegallery.ai/CollectionImages/oneiroscapes/Oneiroscapes.jpg",
+        "banner": "https://account.miragegallery.ai/CollectionImages/oneiroscapes/banner.jpeg"
       },
     {
         "projectId": 16,
@@ -226,7 +256,9 @@
         "secondaryArtistAddress": "",
         "metadata": "ipfs://bafybeigwvbagachb5nsu7ubktf4fndzri6xwhluzmolclzdf3hdz33qale",
         "IPFSImage": "ipfs://QmTpqhBFCJDQ6g37vX9jkWkLDou3X6DR1jbCjCbfXw2bWf",
-        "IPFSBanner": "ipfs://QmenDKQMdBP1GsGN9r1sgtrDGR8V3CUv6J4pq7PhtvWe9K"
+        "IPFSBanner": "ipfs://QmenDKQMdBP1GsGN9r1sgtrDGR8V3CUv6J4pq7PhtvWe9K",
+        "image": "https://account.miragegallery.ai/CollectionImages/syntheticHeartbeats/Synthetic-heartbeats.jpg",
+        "banner": "https://account.miragegallery.ai/CollectionImages/syntheticHeartbeats/banner.jpeg"
       },
     {
         "projectId": 17,
@@ -240,7 +272,9 @@
         "secondaryArtistAddress": "",
         "metadata": "ipfs://bafybeifsqlwindnlrnxh5a6descwkqrfugiq5vuinccvqx4w7cjbfd6boq",
         "IPFSImage": "ipfs://QmQqw62ZBiafR4dxd6NBTSmymwahwwxgrCon8h3UkpoTL5",
-        "IPFSBanner": "ipfs://QmW6zyv14QCUG6S4SSme7j4BnHqSvrNZ7m8MP5X1LirWLx"
+        "IPFSBanner": "ipfs://QmW6zyv14QCUG6S4SSme7j4BnHqSvrNZ7m8MP5X1LirWLx",
+        "image": "https://account.miragegallery.ai/CollectionImages/beyondTheLens/Beyond-the-lens.jpg",
+        "banner": "https://account.miragegallery.ai/CollectionImages/beyondTheLens/banner.jpeg"
       },
       {
         "projectId": 18,
@@ -254,6 +288,8 @@
         "secondaryArtistAddress": "",
         "metadata": "ipfs://bafybeifl7u2i6ctihwa5prwor4ll5jlks73supx7q7h6g3ip6jjv7kbv64",
         "IPFSImage": "ipfs://QmSDX9znsvey3uPMYdJRUcbsUvvSJX64GgizYhyUajrXx2",
-        "IPFSBanner": "ipfs://QmX9zoH1kodb3pJpRQLAWh5xDq7MBVrWAF3JpA1tgBYMkx"
+        "IPFSBanner": "ipfs://QmX9zoH1kodb3pJpRQLAWh5xDq7MBVrWAF3JpA1tgBYMkx",
+        "image": "https://account.miragegallery.ai/CollectionImages/surrealDreams/Surreal-Dreams.jpg",
+        "banner": "https://account.miragegallery.ai/CollectionImages/surrealDreams/banner.jpeg"
       }
 ]}
