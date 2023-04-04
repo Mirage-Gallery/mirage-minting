@@ -126,6 +126,7 @@ const SentientClaim = () => {
             <option value="16">Haze Long (Synthetic Heartbeats)</option>
             <option value="17">KOI (SINEMA)</option>
             <option value="18">Kaysurreal (Sub-Liminal)</option>
+            <option value="19">Deriniti (Wonder)</option>
             <option value="1000">Dreamers</option>
           </select><br></br>
           <br></br><br></br><br></br>
