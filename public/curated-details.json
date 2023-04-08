@@ -291,5 +291,21 @@
         "IPFSBanner": "ipfs://QmX9zoH1kodb3pJpRQLAWh5xDq7MBVrWAF3JpA1tgBYMkx",
         "image": "https://account.miragegallery.ai/CollectionImages/surrealDreams/Surreal-Dreams.jpg",
         "banner": "https://account.miragegallery.ai/CollectionImages/surrealDreams/banner.jpeg"
+      },
+      {
+        "projectId": 19,
+        "dropName": "The Color of Wonder",
+        "name": "Wonder",
+        "artist": "Deriniti",
+        "description": "'The Color of Wonder' is a celebration of the beauty, strength, and diversity of women through the exploration of vibrant colors, abstract patterns, florals, and surrealism. Each artwork is an invitation to embark on a journey of aesthetic exploration and imagination. The diverse collection captures the essence of feminine empowerment and is meant to evoke a sense of awe and wonder. From vivid color palettes and bold surreal abstracts, to delicate florals that are sewn throughout the entire collection, each piece is a unique representation of its chosen aesthetic style and tied together by a cohesive celebration of feminine beauty and strength. Each piece was crafted through the combination of AI and digital editing and infused with love. The Color of Wonder is a beautiful reminder of the power of art to inspire, encourage, empower and celebrate the unique journey of every woman.",
+        "website": "",
+        "license": "CC0",
+        "artistAddress": "0x55206268c0DAec618C42F04539516a0E43ACf31B",
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://bafybeiam6vjk7e3ef56b3heetkjsh5wltikkwqoaamvbsfmf6tgq7yu47u",
+        "IPFSImage": "ipfs://QmQx6e4j5cDdzH68GuFxRJGYB4edVgQHSMMb3rp4FW5NLd",
+        "IPFSBanner": "ipfs://Qmc1qrifrtq5eQAkNZ9yWhzMxeBbd4gCPVuNcomK9Myd9m",
+        "image": "https://account.miragegallery.ai/CollectionImages/theColorOfWonder/Color-of-Wonder.png",
+        "banner": "https://account.miragegallery.ai/CollectionImages/theColorOfWonder/banner.jpeg"
       }
 ]}
