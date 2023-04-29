@@ -307,5 +307,21 @@
         "IPFSBanner": "ipfs://Qmc1qrifrtq5eQAkNZ9yWhzMxeBbd4gCPVuNcomK9Myd9m",
         "image": "https://account.miragegallery.ai/CollectionImages/theColorOfWonder/Color-of-Wonder.png",
         "banner": "https://account.miragegallery.ai/CollectionImages/theColorOfWonder/banner.jpeg"
+      },
+      {
+        "projectId": 20,
+        "dropName": "THINGS THAT SHOULD HAVE RHYMED",
+        "name": "TTSHR",
+        "artist": "Artemis",
+        "description": "THINGS THAT SHOULD HAVE RHYMED is a series of 300 ai generative artworks. Each artwork the result of a breakdown of integrations of grids, they are all simple abstract portraits created using classical generative algorithms and a custom trained machine learning model.",
+        "website": "https://www.artms.xyz/project/ttshr",
+        "license": "CC0",
+        "artistAddress": "0x05d1a84CfE7ACef6FAC12D901F1B0E74393C6f63",
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://bafybeiaeztbgk5d5ti4t2a6zczqlfhcgqmsewalufmzg7ucaaugzoxbwj4",
+        "IPFSImage": "ipfs://QmYNVHN7zxuiDrVj8hjwuNLEYohSacPP4KU2Nus6jABs8M",
+        "IPFSBanner": "ipfs://QmfJYs1rT9MH94RhyL1EJicgvgjcDYiffeNX9zZuL6zr8a",
+        "image": "https://account.miragegallery.ai/CollectionImages/thingsThatShouldHaveRhymed/things-that-should-have-rhymed.jpg",
+        "banner": "https://account.miragegallery.ai/CollectionImages/thingsThatShouldHaveRhymed/banner.jpeg"
       }
 ]}
