@@ -323,5 +323,21 @@
         "IPFSBanner": "ipfs://QmfJYs1rT9MH94RhyL1EJicgvgjcDYiffeNX9zZuL6zr8a",
         "image": "https://res.cloudinary.com/do1gnj1vn/image/upload/v1683483566/Curated/Marketplace%20Content/thingsThatShouldHaveRhymed/things-that-should-have-rhymed_cxdty3.jpg",
         "banner": "https://res.cloudinary.com/do1gnj1vn/image/upload/v1683483588/Curated/Marketplace%20Content/thingsThatShouldHaveRhymed/banner_zhr37q.jpg"
+      },
+      {
+        "projectId": 21,
+        "dropName": "Meta Masks by David Rees",
+        "name": "Meta Mask",
+        "artist": "David Rees",
+        "description": "Our digital identities are inherently transformative. We get to choose our name and our profile picture or avatar. We choose the masks we wear. But it is just a mask. There is a light side and dark side to digital culture and how it changes each of us. Masks protect us and they transform us. For good and for bad. For some having their identity protected gives them a fresh start, they can be who they always wanted to be. Safe from their past, born again. But others use this anonymity to live without consequence and for their own personal gain. 'Meta Masks' explores this transformative nature of physical to digital. Each piece is created by moving between the two states, one informing the other until the artwork exists in duality between a painting and a digital animation. Transformation between physical and digital. Hidden truths. These are the themes of “Meta Masks” and the themes that permeate our digital culture.",
+        "website": "https://www.davidreesartist.com/",
+        "license": "CC BY-NC-SA",
+        "artistAddress": "0x0ed68258E6eD00072AfEE086cd6E24BF0BC82449",
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://bafybeibhke5yb23fpk3psj65iqgc246puqheyuovodk6vjz6i2ov5pjobi",
+        "IPFSImage": "ipfs://QmYCR1SXt79rdQTiyyRe2XjnDCEfQ3MaZo3tNMj8ChEKB4",
+        "IPFSBanner": "ipfs://QmZ6hQrSSVQd1PTvh6zu18q2pBC6gSgWgNv2pYy4CE4bwr",
+        "image": "https://res.cloudinary.com/do1gnj1vn/image/upload/v1684441396/Curated/Marketplace%20Content/metaMasks/1-optimized_qt554m.gif",
+        "banner": "https://res.cloudinary.com/do1gnj1vn/image/upload/v1684441399/Curated/Marketplace%20Content/metaMasks/banner_cknvrg.jpg"
       }
 ]}

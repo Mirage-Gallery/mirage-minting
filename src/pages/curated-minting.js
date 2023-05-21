@@ -156,6 +156,7 @@ const CuratedMinting = () => {
             <option value="0">Select Artist</option>
             <option value="11">MrHabMo (Esquisse)</option>
             <option value="19">Deriniti (Wonder)</option>
+            <option value="21">David Rees (Meta Mask)</option>
           </select>
           <br></br><br></br><br></br>
           <p>Leave membership field blank for eligible curated holders during second presale phase.</p>
