@@ -337,7 +337,23 @@
         "metadata": "ipfs://bafybeibhke5yb23fpk3psj65iqgc246puqheyuovodk6vjz6i2ov5pjobi",
         "IPFSImage": "ipfs://QmYCR1SXt79rdQTiyyRe2XjnDCEfQ3MaZo3tNMj8ChEKB4",
         "IPFSBanner": "ipfs://QmZ6hQrSSVQd1PTvh6zu18q2pBC6gSgWgNv2pYy4CE4bwr",
-        "image": "https://res.cloudinary.com/do1gnj1vn/image/upload/v1684441396/Curated/Marketplace%20Content/metaMasks/1-optimized_qt554m.gif",
+        "image": "https://res.cloudinary.com/do1gnj1vn/image/upload/v1686270900/Curated/Marketplace%20Content/metaMasks/Fake_Liquidity_k0ngfc.png",
         "banner": "https://res.cloudinary.com/do1gnj1vn/image/upload/v1684441399/Curated/Marketplace%20Content/metaMasks/banner_cknvrg.jpg"
+      },
+      {
+        "projectId": 22,
+        "dropName": "Art is an Explosion by Charlesai",
+        "name": "Explosion",
+        "artist": "Charlesai",
+        "description": "In this collection, each piece serves as a visual metaphor for the eruptive energy of creativity, where ideas burst forth, much like an explosion, from the nucleus of an artist's imagination. It captures the vibrant chaos and tumultuous passion intrinsic to the act of creation, reflecting the artist's journey through a cacophony of emotions, ideas, and revelations. It takes the viewer through the tempest of the creative process - the initial spark of inspiration, the building intensity of shaping an idea, the explosive act of bringing it to life, and the subsequent calming silence that follows the storm of creation. The pieces in 'Art is an Explosion' highlight the emotional depth and complexity hidden beneath the surface of each artwork, peeling back the layers to reveal the raw, unfiltered chaos from which creativity springs forth. It challenges the notion of art as a purely aesthetic endeavor, instead portraying it as an emotional catharsis, a deeply personal exploration, and an explosive act of self-expression. In essence, 'Art is an Explosion' offers a celebration of the artist's spirit and the transformative power of art. It serves as a vivid testament to the beautiful chaos of creation, encouraging viewers to not only appreciate the final product but to also delve into the dramatic journey of its conception and birth. It underscores the idea that in art, as in life, even chaos can lead to a masterstroke.",
+        "website": "",
+        "license": "CC0",
+        "artistAddress": "0xd2839E6d35EfAe479Bcc932fe2779f97a24177AF",
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://bafybeigorrqblv4a3wrcnbkkw7hreyysenikpdk6rc26wzkfkvsjqodxn4",
+        "IPFSImage": "ipfs://QmQT38ZQVJq8phPTwXR5rMb661tmBCYeNJUhRk1ismXzpS",
+        "IPFSBanner": "ipfs://QmNib24fbxnCyrCsESiMHKaHMQXFi5KrqtNoVECvNowDok",
+        "image": "https://res.cloudinary.com/do1gnj1vn/image/upload/v1686270833/Curated/Marketplace%20Content/artIsAnExplosion/50_g7nkus.jpg",
+        "banner": "https://res.cloudinary.com/do1gnj1vn/image/upload/v1686270825/Curated/Marketplace%20Content/artIsAnExplosion/banner_niw8zn.jpg"
       }
 ]}
