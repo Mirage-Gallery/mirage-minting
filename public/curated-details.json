@@ -355,5 +355,21 @@
         "IPFSBanner": "ipfs://QmNib24fbxnCyrCsESiMHKaHMQXFi5KrqtNoVECvNowDok",
         "image": "https://res.cloudinary.com/do1gnj1vn/image/upload/v1686270833/Curated/Marketplace%20Content/artIsAnExplosion/50_g7nkus.jpg",
         "banner": "https://res.cloudinary.com/do1gnj1vn/image/upload/v1686270825/Curated/Marketplace%20Content/artIsAnExplosion/banner_niw8zn.jpg"
+      },
+      {
+        "projectId": 23,
+        "dropName": "The Emperor's New Buildings by DVK the artist",
+        "name": "Concept",
+        "artist": "DVK the artist",
+        "description": "The collection “The Emperor's New Buildings” serves as a metaphor for various aspects of what society believes is possible today. As AI evolves into an ever more powerful tool, we now enter the era of Neo-PostHumanism. This shift moves us beyond human reliance on physical tools, where our creations are increasingly shaped by AI, guided by our instructions, thoughts, and stylistic preferences. In a not so distant future a sketch or idea may become intricate architectural plans, revolutionizing architecture as well as many other creative processes.\n\nThrough a year-long process, the seamless collaboration between DVK and machine intelligence gives rise to 300 concepts that redefine artistic expression and architectural design. This transformative journey not only opens up new horizons but also confronts the prevailing narrative that stands against the potential of AI.\n\nExpress yourself.",
+        "website": "",
+        "license": "RM",
+        "artistAddress": "0x0E5665BD6166aBBFE2113B999b7870CC4849120b",
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://bafybeihnune7w2ph5d26clvhaxyfxixbbg5edsv3eeq5xoh7qyv53ddcju",
+        "IPFSImage": "ipfs://QmTGSEJok5j3i7mFFTJ1LJoiJ9XTnApaKcXxSPp63835aA",
+        "IPFSBanner": "ipfs://QmeV7gNb2Ap7YEGndfnisZihYfokPWBETzFeNWqMWPq2si",
+        "image": "https://res.cloudinary.com/do1gnj1vn/image/upload/v1687974170/Curated/Marketplace%20Content/theEmperorsNewBuildings/DVKartwork246_amxxa6.png",
+        "banner": "https://res.cloudinary.com/do1gnj1vn/image/upload/v1687974146/Curated/Marketplace%20Content/theEmperorsNewBuildings/banner_jhtrb0.jpg"
       }
 ]}
