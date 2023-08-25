@@ -339,5 +339,19 @@
         "metadata": "ipfs://bafybeigj5o3t27xjnz64jr77ijfywhombnlecel6vr2nrntq3j4lky6rji",
         "image": "https://res.cloudinary.com/do1gnj1vn/image/upload/v1690174940/Curated/Marketplace%20Content/interludesOfGrace/00013-1502901395_u43d5e.png",
         "banner": "https://res.cloudinary.com/do1gnj1vn/image/upload/v1690174943/Curated/Marketplace%20Content/interludesOfGrace/banner_udshzr.jpg"
+      },
+      {
+        "projectId": 25,
+        "dropName": "Hidden Depths",
+        "name": "Elba",
+        "artist": "BB",
+        "description": "'Hidden Depths' is meant to be more than pretty images. If one looks closer, there is a mysterious theme. This collection represents these hidden parts of ourselves, the things that we keep behind a mask, faces veiled in shadows, symbolizing the profound struggles of individuals burdened by the weight of depression. Each piece serves as a reminder of the intricacies of the human psyche, particularly when obscured by the suffocating grasp of mental illness. The concealed faces evoke the silent struggle many face when attempting to conceal the darkness that dwells within, like a tightly kept secret locked away from prying eyes.",
+        "website": "",
+        "license": "CC0",
+        "artistAddress": "0xe1eD598DDfA43672671B3Ce4226e32002091BD33",
+        "secondaryArtistAddress": "",
+        "metadata": "ipfs://bafybeid6syvbb357cvxuyyyx4c2tubyuccox7jqyb2mk6f6tjt4d3luala",
+        "image": "https://res.cloudinary.com/do1gnj1vn/image/upload/v1693002383/Curated/Marketplace%20Content/hiddenDepths/small_itsbb__Photorealistic_dark_haunting_surreal_professional_photos_f10717f9-49ca-4b5f-8147-cd76408bbbf1-min_rexqgk.png",
+        "banner": "https://res.cloudinary.com/do1gnj1vn/image/upload/v1693002349/Curated/Marketplace%20Content/hiddenDepths/banner_sxdoeh.jpg"
       }
 ]}
